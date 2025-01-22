@@ -1,0 +1,114 @@
+<app-auth-layout>
+  <div>
+    <img src="/book-wise-logo.svg" alt="book wise logo" class="object-contain"/>
+    <h2 class="mt-6 text-white text-xl md:text-3xl font-semibold">Create Your Library Account</h2>
+    <h4 class="mt-2 text-primaryWhiteColor font-normal text-sm md:text-base">
+      Please complete all fields and upload a valid university ID to gain access to the library
+    </h4>
+  </div>
+
+  <div class="mt-6">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label
+          for="fullName"
+          [ngClass]="{'text-red-500': fullNameIsInvalid, 'text-primaryWhiteColor': !fullNameIsInvalid}"
+          class="block text-sm  mb-2">
+          Full Name
+        </label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          formControlName="full Name"
+          placeholder="fullName"
+          class="border-none outline-none w-full px-5 py-3 text-white font-medium rounded-md bg-inputColor"/>
+        @if (fullNameIsInvalid) {
+          <p class="text-sm text-red-500 mt-2">Please enter a valid full name.</p>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="email"
+          [ngClass]="{'text-red-500': emailIsInvalid, 'text-primaryWhiteColor': !emailIsInvalid}"
+          class="block text-sm  mb-2">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          placeholder="email"
+          class="border-none outline-none w-full px-5 py-3 text-white font-medium rounded-md bg-inputColor"/>
+        @if (emailIsInvalid) {
+          <p class="text-sm text-red-500 mt-2">Please enter a valid email address.</p>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="universityId"
+          [ngClass]="{'text-red-500': universityIdIsInvalid, 'text-primaryWhiteColor': !universityIdIsInvalid}"
+          class="block text-sm text-primaryWhiteColor mb-2">
+          University Id
+        </label>
+        <div class="relative flex items-center bg-inputColor">
+          <input
+            [type]="showUniversityId? 'text': 'password'"
+            id="universityId"
+            name="universityId"
+            formControlName="universityId"
+            placeholder="********"
+            class="border-none outline-none w-full pl-5 pr-2 py-3 text-white font-medium rounded-md bg-inputColor"/>
+          <button
+            (click)="toggleUniversityIdVisibility()"
+          >
+            <img [src]="showUniversityId? '/eye-slash.svg': '/eye.svg'" alt="" class="mr-5 object-contain">
+          </button>
+        </div>
+        @if (universityIdIsInvalid) {
+          <p class="text-sm text-red-500 mt-2">Please enter a valid universityId.</p>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="password"
+          [ngClass]="{'text-red-500': passwordIsInvalid, 'text-primaryWhiteColor': !passwordIsInvalid}"
+          class="block text-sm text-primaryWhiteColor mb-2">
+          Password
+        </label>
+        <div class="relative  flex items-center bg-inputColor">
+          <input
+            [type]="showPassword? 'text': 'password'"
+            id="password"
+            name="password"
+            formControlName="password"
+            placeholder="********"
+            class="border-none outline-none w-full pl-5 pr-2 py-3 text-white font-medium rounded-md bg-inputColor"/>
+          <button
+            (click)="togglePasswordVisibility()"
+          >
+            <img [src]="showPassword? '/eye-slash.svg': '/eye.svg'" alt="" class="mr-5 object-contain">
+          </button>
+        </div>
+        @if (passwordIsInvalid) {
+          <p class="text-sm text-red-500 mt-2">Please enter a valid password.</p>
+        }
+      </div>
+
+      <a routerLink="/home"
+        class="w-full text-[#14171C] bg-buttonColor hover:bg-buttonColor/90 transition-all rounded-md p-4 text-base font-semibold text-center block">
+        Sign Up
+      </a>
+
+
+      <div class="mt-3 text-sm text-primaryWhiteColor font-medium text-center">
+        Have an account already? <a routerLink="/signin" class="text-buttonColor">Login</a>
+      </div>
+
+    </form>
+  </div>
+</app-auth-layout>
