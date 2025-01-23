@@ -1,0 +1,25 @@
+<li class="cursor-pointer relative" (click)="onToggleDropDown()">
+  <img src="/user.png" alt="user" class="size-7 rounded-full object-contain"/>
+
+  <div
+    *ngIf="isDropdownVisible()"
+    class="w-[192px] bg-primaryDarkColor2 p-2.5 rounded-xl absolute top-[50px] z-50 right-0 transition-all">
+    <div class="flex flex-col">
+      <a routerLink=""
+         class="p-2.5 flex items-center gap-2.5 hover:bg-black/30 rounded-lg transition-all">
+        <img alt="" class="" src="/edit-user-profile.svg">
+        <h3 class="text-sm text-slate-200 font-medium">Edit Profile</h3>
+      </a>
+      <a routerLink=""
+         class="p-2.5 flex items-center gap-2.5 hover:bg-black/30 rounded-lg transition-all">
+        <img alt="" class="" src="/settings.svg">
+        <h3 class="text-sm text-slate-200 font-medium">Settings</h3>
+      </a>
+      <a routerLink="/signin"
+         class="p-2.5 flex items-center gap-2.5 hover:bg-black/30 rounded-lg transition-all">
+        <img alt="" class="" src="/logout.svg">
+        <h3 class="text-sm text-slate-200 font-medium">Logout</h3>
+      </a>
+    </div>
+  </div>
+</li>

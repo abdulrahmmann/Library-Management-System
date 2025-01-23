@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {NgClass} from '@angular/common';
 import {AuthLayoutComponent} from '../../components/auth-layout/auth-layout.component';
 
@@ -78,5 +78,22 @@ export class SignupComponent {
     return this.signupForm.controls.universityId.invalid &&
       this.signupForm.controls.universityId.dirty &&
       this.signupForm.controls.universityId.touched
+  }
+
+  isFormValid(): boolean {
+    return !this.emailIsInvalid &&
+      !this.passwordIsInvalid &&
+      !this.fullNameIsInvalid &&
+      !this.universityIdIsInvalid;
+  }
+
+  private router = inject(Router);
+
+  onSignUpClick(): void {
+    if (this.isFormValid()) {
+      this.router.navigate(['/home']);
+    } else {
+      alert('Please fill out all fields correctly.');
+    }
   }
 }
