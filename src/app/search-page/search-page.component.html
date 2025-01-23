@@ -1,0 +1,25 @@
+<app-main-layout>
+  <div class="max-w-[600px] mt-20 mx-auto text-center">
+    <h2 class="text-lg text-primaryWhiteColor font-bebas tracking-wider">Discover Your Next Great Read</h2>
+    <p class="mt-2 text-3xl sm:text-5xl font-semibold text-primaryWhiteColor leading-snug">
+      Explore and Search for <span class="text-lightYellowColor">Any Book</span> In Our Library
+    </p>
+    <div class="p-5 mt-10 relative bg-primaryDarkColor rounded-lg">
+      <img src="/search-icon.svg" alt="search icon" class="absolute left-4 top-[50%] -translate-y-[50%]"/>
+      <!--(input)="onSearchedBook($any(event).target.value)"-->
+      <input type="text"
+             placeholder="search for a book"
+             class="bg-primaryDarkColor rounded-lg border-none outline-none text-white text-base font-semibold ml-[28px]"
+             style="width: calc(100% - 28px);"
+      />
+    </div>
+  </div>
+  <h2 class="mt-16 mb-8 text-start text-lg text-primaryWhiteColor font-semibold">
+    Search Result for <span class="text-lightYellowColor">Triller Mystry</span>
+  </h2>
+  @if (false) {
+    <app-search-empty/>
+  } @else {
+    <app-search-results/>
+  }
+</app-main-layout>
