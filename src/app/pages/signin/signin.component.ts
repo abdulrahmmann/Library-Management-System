@@ -13,7 +13,6 @@ import {AuthLayoutComponent} from '../../components/auth-layout/auth-layout.comp
     AuthLayoutComponent,
   ],
   templateUrl: './signin.component.html',
-  styleUrl: './signin.component.css'
 })
 export class SigninComponent {
   signinForm = new FormGroup({

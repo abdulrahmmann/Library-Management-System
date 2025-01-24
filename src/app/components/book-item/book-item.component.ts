@@ -4,7 +4,6 @@ import {Component, input} from '@angular/core';
   selector: 'app-book-item',
   imports: [],
   templateUrl: './book-item.component.html',
-  styleUrl: './book-item.component.css'
 })
 
 export class BookItemComponent {

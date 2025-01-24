@@ -16,7 +16,6 @@ import {LatestBokksComponent} from '../../components/latest-bokks/latest-bokks.c
     LatestBokksComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
 })
 export class HomeComponent {
 

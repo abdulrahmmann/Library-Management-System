@@ -31,6 +31,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/book-details/book-details.component').then((mod) => mod.BookDetailsComponent)
   },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./pages/not-found/not-found.component').then((mod) => mod.NotFoundComponent)
+  },
   // {
   //   path: 'about',
   //   loadComponent: () =>

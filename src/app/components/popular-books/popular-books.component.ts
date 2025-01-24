@@ -7,7 +7,6 @@ import {BookItemComponent} from '../book-item/book-item.component';
     BookItemComponent,
   ],
   templateUrl: './popular-books.component.html',
-  styleUrl: './popular-books.component.css'
 })
 export class PopularBooksComponent {
 

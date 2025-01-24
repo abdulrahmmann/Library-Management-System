@@ -13,7 +13,6 @@ import {SearchResultsComponent} from '../../components/search-results/search-res
     SearchResultsComponent
   ],
   templateUrl: './search-page.component.html',
-  styleUrl: './search-page.component.css'
 })
 export class SearchPageComponent {
   bookSearched = signal<string>('');

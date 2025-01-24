@@ -9,7 +9,6 @@ import {RouterLink} from '@angular/router';
     RouterLink
   ],
   templateUrl: './new-released-books.component.html',
-  styleUrl: './new-released-books.component.css'
 })
 export class NewReleasedBooksComponent {
 

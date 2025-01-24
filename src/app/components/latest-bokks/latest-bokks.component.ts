@@ -7,7 +7,6 @@ import {BookItemComponent} from "../book-item/book-item.component";
         BookItemComponent
     ],
   templateUrl: './latest-bokks.component.html',
-  styleUrl: './latest-bokks.component.css'
 })
 export class LatestBokksComponent {
 

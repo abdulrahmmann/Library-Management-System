@@ -10,7 +10,6 @@ import {UserDropdownComponent} from '../user-dropdown/user-dropdown.component';
     UserDropdownComponent
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

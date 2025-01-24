@@ -11,7 +11,6 @@ import {BookItemComponent} from '../../components/book-item/book-item.component'
     BookItemComponent
   ],
   templateUrl: './book-details.component.html',
-  styleUrl: './book-details.component.css'
 })
 export class BookDetailsComponent {
 
