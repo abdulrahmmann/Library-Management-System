@@ -8,9 +8,6 @@ import {PopularBooksComponent} from '../popular-books/popular-books.component';
   selector: 'app-main-layout',
   imports: [
     HeaderComponent,
-    HomeBannerComponent,
-    NewReleasedBooksComponent,
-    PopularBooksComponent
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
