@@ -1,0 +1,475 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.3.2",
+  "pathMappings": {
+    "@spartan-ng/ui-button-helm": [
+      ".\\libs/ui/ui-button-helm/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "library-management-system": [
+        {
+          "file": ".editorconfig",
+          "hash": "8037249353422744134"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "10175894702052279752"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "11934160580685414355"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17406702432687230417"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "10093397977228577162"
+        },
+        {
+          "file": "README.md",
+          "hash": "7705544684773207521"
+        },
+        {
+          "file": "angular.json",
+          "hash": "16607826639680821842"
+        },
+        {
+          "file": "components.json",
+          "hash": "3089158842223537119"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "17000175277216041366"
+        },
+        {
+          "file": "package.json",
+          "hash": "15886026740673779207",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@spartan-ng/cli",
+            "npm:@types/jasmine",
+            "npm:autoprefixer",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:postcss",
+            "npm:tailwind-merge",
+            "npm:tailwindcss",
+            "npm:tailwindcss-animate",
+            "npm:typescript",
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@spartan-ng/brain",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "public/background-img.png",
+          "hash": "501907339623178167"
+        },
+        {
+          "file": "public/bg-gradient.png",
+          "hash": "12687216917176245099"
+        },
+        {
+          "file": "public/book-container-black.png",
+          "hash": "7889912615374633547"
+        },
+        {
+          "file": "public/book-container-blue.png",
+          "hash": "16724653888188631230"
+        },
+        {
+          "file": "public/book-container-brown.png",
+          "hash": "708187802749481998"
+        },
+        {
+          "file": "public/book-container-purple.png",
+          "hash": "11988797600832182420"
+        },
+        {
+          "file": "public/book-container-red.png",
+          "hash": "3393619972209310433"
+        },
+        {
+          "file": "public/book-container-yellow.png",
+          "hash": "12721871669678877152"
+        },
+        {
+          "file": "public/book-icon.svg",
+          "hash": "1581978488978664168"
+        },
+        {
+          "file": "public/book-poster.png",
+          "hash": "16189405138608798980"
+        },
+        {
+          "file": "public/book-poster2.png",
+          "hash": "1444804398803846851"
+        },
+        {
+          "file": "public/book-poster3.png",
+          "hash": "18135563877781444032"
+        },
+        {
+          "file": "public/book-poster4.png",
+          "hash": "8658762117838334945"
+        },
+        {
+          "file": "public/book-poster5.png",
+          "hash": "13532191029815156082"
+        },
+        {
+          "file": "public/book-poster6.png",
+          "hash": "3119507712801403231"
+        },
+        {
+          "file": "public/book-wise-logo.png",
+          "hash": "12815342493017488534"
+        },
+        {
+          "file": "public/book-wise-logo.svg",
+          "hash": "3646779480065441676"
+        },
+        {
+          "file": "public/book.png",
+          "hash": "2336928433683087485"
+        },
+        {
+          "file": "public/edit-user-profile.svg",
+          "hash": "306262301777810626"
+        },
+        {
+          "file": "public/eye-slash.svg",
+          "hash": "3981000167343518226"
+        },
+        {
+          "file": "public/eye.svg",
+          "hash": "12975019634025493916"
+        },
+        {
+          "file": "public/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "public/left-arrow.svg",
+          "hash": "17487647556160167432"
+        },
+        {
+          "file": "public/logo.svg",
+          "hash": "17893001452577887990"
+        },
+        {
+          "file": "public/logout.svg",
+          "hash": "3736274990666846254"
+        },
+        {
+          "file": "public/main-background.png",
+          "hash": "2807651605063047388"
+        },
+        {
+          "file": "public/noise-overlay.png",
+          "hash": "7242282924167264521"
+        },
+        {
+          "file": "public/right-arrow.svg",
+          "hash": "7875999002526770743"
+        },
+        {
+          "file": "public/search-empty.png",
+          "hash": "771974892539413533"
+        },
+        {
+          "file": "public/search-icon.svg",
+          "hash": "16085693712908646232"
+        },
+        {
+          "file": "public/settings.svg",
+          "hash": "7303563076075218932"
+        },
+        {
+          "file": "public/star-white.svg",
+          "hash": "12401487207725618634"
+        },
+        {
+          "file": "public/star.svg",
+          "hash": "8228422202275653908"
+        },
+        {
+          "file": "public/user.png",
+          "hash": "13215583534119655044"
+        },
+        {
+          "file": "public/video-img.png",
+          "hash": "12641709245901951261"
+        },
+        {
+          "file": "src/app/app.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "5190349111181466248"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "18405567360706452173"
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "16561019206697382666"
+        },
+        {
+          "file": "src/app/app.routes.ts",
+          "hash": "11524818327689885222"
+        },
+        {
+          "file": "src/app/components/auth-layout/auth-layout.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/auth-layout/auth-layout.component.html",
+          "hash": "11541921819896879375"
+        },
+        {
+          "file": "src/app/components/auth-layout/auth-layout.component.ts",
+          "hash": "6246915494154217612"
+        },
+        {
+          "file": "src/app/components/book-item/book-item.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/book-item/book-item.component.html",
+          "hash": "7644226593429145438"
+        },
+        {
+          "file": "src/app/components/book-item/book-item.component.ts",
+          "hash": "10409581321376236504"
+        },
+        {
+          "file": "src/app/components/header/header.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/header/header.component.html",
+          "hash": "3293173641777091288"
+        },
+        {
+          "file": "src/app/components/header/header.component.ts",
+          "hash": "7644190622134676410"
+        },
+        {
+          "file": "src/app/components/home-banner/home-banner.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/home-banner/home-banner.component.html",
+          "hash": "13501382491047848418"
+        },
+        {
+          "file": "src/app/components/home-banner/home-banner.component.ts",
+          "hash": "5773225561266784417"
+        },
+        {
+          "file": "src/app/components/latest-bokks/latest-bokks.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/latest-bokks/latest-bokks.component.html",
+          "hash": "8026348706271063583"
+        },
+        {
+          "file": "src/app/components/latest-bokks/latest-bokks.component.ts",
+          "hash": "11572157996857377151"
+        },
+        {
+          "file": "src/app/components/main-layout/main-layout.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/main-layout/main-layout.component.html",
+          "hash": "12002777243584522882"
+        },
+        {
+          "file": "src/app/components/main-layout/main-layout.component.ts",
+          "hash": "8791243904678107965"
+        },
+        {
+          "file": "src/app/components/new-released-books/new-released-books.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/new-released-books/new-released-books.component.html",
+          "hash": "11002423324360130555"
+        },
+        {
+          "file": "src/app/components/new-released-books/new-released-books.component.ts",
+          "hash": "713546716294662912"
+        },
+        {
+          "file": "src/app/components/popular-books/popular-books.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/popular-books/popular-books.component.html",
+          "hash": "17804596812530599669"
+        },
+        {
+          "file": "src/app/components/popular-books/popular-books.component.ts",
+          "hash": "9501459393633714344"
+        },
+        {
+          "file": "src/app/components/search-empty/search-empty.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/search-empty/search-empty.component.html",
+          "hash": "6952071646306751493"
+        },
+        {
+          "file": "src/app/components/search-empty/search-empty.component.ts",
+          "hash": "5759675810544722000"
+        },
+        {
+          "file": "src/app/components/search-results/search-results.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/search-results/search-results.component.html",
+          "hash": "10745065280247206587"
+        },
+        {
+          "file": "src/app/components/search-results/search-results.component.ts",
+          "hash": "14339339845280960390"
+        },
+        {
+          "file": "src/app/components/user-dropdown/user-dropdown.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/user-dropdown/user-dropdown.component.html",
+          "hash": "1391313705115929624"
+        },
+        {
+          "file": "src/app/components/user-dropdown/user-dropdown.component.ts",
+          "hash": "17806532665301251425"
+        },
+        {
+          "file": "src/app/models/booksList.ts",
+          "hash": "3351935635018047059"
+        },
+        {
+          "file": "src/app/pages/book-details/book-details.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/pages/book-details/book-details.component.html",
+          "hash": "13009726562919618967"
+        },
+        {
+          "file": "src/app/pages/book-details/book-details.component.ts",
+          "hash": "11085805815407465479"
+        },
+        {
+          "file": "src/app/pages/home/home.component.css",
+          "hash": "15764842254792776609"
+        },
+        {
+          "file": "src/app/pages/home/home.component.html",
+          "hash": "11910189320695139734"
+        },
+        {
+          "file": "src/app/pages/home/home.component.ts",
+          "hash": "16221858645843657325"
+        },
+        {
+          "file": "src/app/pages/search-page/search-page.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/pages/search-page/search-page.component.html",
+          "hash": "6214182539182400624"
+        },
+        {
+          "file": "src/app/pages/search-page/search-page.component.ts",
+          "hash": "10586601565376829536"
+        },
+        {
+          "file": "src/app/pages/signin/signin.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/pages/signin/signin.component.html",
+          "hash": "8037197129016563287"
+        },
+        {
+          "file": "src/app/pages/signin/signin.component.ts",
+          "hash": "14419053839408215702"
+        },
+        {
+          "file": "src/app/pages/signup/signup.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/pages/signup/signup.component.html",
+          "hash": "5246409411886241628"
+        },
+        {
+          "file": "src/app/pages/signup/signup.component.ts",
+          "hash": "9681874895686482860"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "13516089156020885031"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "4169901790405087765"
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "17122173065553405240"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "1855119009170406612"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "14560978611694835822"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "7100641745389417367"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "11023685540591620072"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

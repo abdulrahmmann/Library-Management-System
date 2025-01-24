@@ -26,6 +26,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/search-page/search-page.component').then((mod) => mod.SearchPageComponent)
   },
+  {
+    path: 'book-details',
+    loadComponent: () =>
+      import('./pages/book-details/book-details.component').then((mod) => mod.BookDetailsComponent)
+  },
   // {
   //   path: 'about',
   //   loadComponent: () =>

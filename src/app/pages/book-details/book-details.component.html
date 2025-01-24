@@ -1,1 +1,81 @@
-<p>book-details works!</p>
+<app-main-layout>
+  <app-home-banner/>
+
+  <section class="pt-0">
+    <div class="flex items-center justify-between mb-5">
+      <div class="flex items-center gap-3">
+        <img src="/logo.svg" alt="logo" class="size-10"/>
+        <h2 class="text-white text-2xl font-bebas tracking-wide uppercase">Book Details</h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-5">
+      <div>
+        <div class="mb-5">
+          <h2 class="text-white text-2xl font-bebas tracking-wide uppercase mb-5">Video</h2>
+          <img src="/video-img.png" alt="" class="" />
+        </div>
+        <div>
+          <h2 class="text-white text-2xl font-bebas tracking-wide uppercase mb-5">Summary</h2>
+          <div class="text-sm text-start text-primaryWhiteColor font-light leading-relaxed">
+            <p class="mb-5">
+              People in Glass Houses by Jayne Castle (a pseudonym for Jayne Ann Krentz) is a science fiction romance set
+              in
+              a future world where people with psychic abilities live in harmony with advanced technology. The story
+              follows
+              the main characters, Harriet and Sam, who are drawn together under unusual circumstances.
+            </p>
+            <p class="mb-5">
+              Harriet, a talented psychic, works for a company that offers psychic services in a futuristic society. When
+              she finds herself tangled in a dangerous situation involving a mysterious conspiracy, she enlists the help
+              of Sam, a former investigator with a dark past. As they uncover the secrets surrounding a glass house—a
+              mysterious structure tied to their investigation—they must navigate their growing attraction while facing
+              hidden dangers.
+            </p>
+            <p>
+              The novel combines elements of mystery, suspense, and romance, with a focus on psychic abilities, futuristic
+              technology, and the complexities of relationships. The title, "People in Glass Houses," symbolizes the
+              fragile nature of the world the characters inhabit and the vulnerabilities they face in their personal and
+              professional lives.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-white text-2xl font-bebas tracking-wide uppercase mb-5">More similar books</h2>
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 gap-y-10">
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster.png'"
+                         [bookPosterContainer]="'/book-container-brown.png'"
+          />
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster2.png'"
+                         [bookPosterContainer]="'/book-container-yellow.png'"
+          />
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster3.png'"
+                         [bookPosterContainer]="'/book-container-black.png'"
+          />
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster4.png'"
+                         [bookPosterContainer]="'/book-container-red.png'"
+          />
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster5.png'"
+                         [bookPosterContainer]="'/book-container-blue.png'"
+          />
+          <app-book-item [bookName]="'Origin - By Dan Brown'"
+                         [bookGenre]="'Thriller / Mystery'"
+                         [bookPosterImage]="'/book-poster6.png'"
+                         [bookPosterContainer]="'/book-container-purple.png'"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</app-main-layout>
