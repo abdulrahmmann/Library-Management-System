@@ -1,0 +1,22 @@
+<section class="p-4 mb-4 bg-white rounded-xl">
+  <div class="flex items-center justify-between mb-3.5">
+    <h2 class="box-title">Barrow Requests</h2>
+    <a routerLink=""
+       class="text-sm font-bold text-[#25388C] px-3 py-2 bg-[#F8F8FF] rounded-lg">
+      View all
+    </a>
+  </div>
+  <div>
+    @for (item of borrowRequestItems.slice(0,3); track item.id) {
+      <app-borrow-request-item
+        [bookName]="item.bookName"
+        [author]="item.author"
+        [bookPoster]="item.poster"
+        [borrowedDate]="item.dateBorrowed"
+        [borrowedUserImg]="item.userBorrowedImg"
+        [borrowedUserName]="item.userBorrowedName"
+        [genre]="item.genre">
+      </app-borrow-request-item>
+    }
+  </div>
+</section>

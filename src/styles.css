@@ -10,7 +10,9 @@ body {
 font-family: 'IBM Plex Sans', 'Bebas Neue', sans-serif;
 }
 
-
+.box-title {
+  @apply text-lg font-semibold text-primaryDarkColor3;
+}
 
 
 :root {

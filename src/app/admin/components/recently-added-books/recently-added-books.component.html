@@ -1,0 +1,31 @@
+<section class="p-4 mb-4 bg-white rounded-xl h-full">
+  <div class="flex items-center justify-between mb-3.5">
+    <h2 class="box-title">Recently Added Books</h2>
+    <a routerLink=""
+       class="text-sm font-bold text-[#25388C] px-3 py-2 bg-[#F8F8FF] rounded-lg">
+      View all
+    </a>
+  </div>
+
+  <div class="p-4 bg-[#F8F8FF] border border-[#F8F8FF] rounded-lg mb-3.5">
+    <div class="flex items-center gap-3.5">
+      <button class="bg-white rounded-full size-12 flex items-center justify-center">
+        <img src="/admin/plus-icon.svg" alt="plus icon" />
+      </button>
+      <h2 class="box-title">Add New Book</h2>
+    </div>
+  </div>
+
+  <div>
+    @for (item of recentlyBooks().slice(0, 4); track item.id) {
+      <app-recently-added-books-item
+        [bookName]="item.bookName"
+        [author]="item.author"
+        [bookPoster]="item.poster"
+        [date]="item.dateBorrowed"
+        [genre]="item.genre">
+      </app-recently-added-books-item>
+    }
+  </div>
+
+</section>
