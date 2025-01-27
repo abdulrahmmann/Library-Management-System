@@ -1,9 +1,10 @@
 <article class="max-w-[160px] xs:max-w-[140px] mx-auto md:mx-0 cursor-pointer">
-  <div class="relative h-fit xs:h-[200px]">
-    <img [src]="bookPosterContainer()" alt="book container" class="h-full w-full"/>
-    <img [src]="bookPosterImage()" alt="book poster" class="absolute h-full top-0 right-0"
-         style="width: calc(100% - 17px); height: calc(100% - 26px)"/>
+  <img [src]="bookPosterContainer()" alt="book container" class="h-full w-full hidden"/>
+  <div class="relative">
+    <app-book-cover [bookCoverColor]="'#C73D3A'" class="" />
+    <img [src]="bookPosterImage()" alt="book poster" class="absolute top-0 -right-1"/>
   </div>
-  <h2 class="text-white font-semibold text-base mt-4 mb-2">{{bookName()}}</h2>
-  <h4 class="text-white/60 font-normal italic text-sm">{{bookGenre()}}</h4>
+  <h2 class="text-white font-semibold text-base mt-4 mb-2">{{ bookName() }}</h2>
+  <h4 class="text-white/60 font-normal italic text-sm">{{ bookGenre() }}</h4>
 </article>
+

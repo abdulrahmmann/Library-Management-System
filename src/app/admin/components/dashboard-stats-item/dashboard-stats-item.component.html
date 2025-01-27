@@ -1,0 +1,13 @@
+<div class="bg-white rounded-lg p-5">
+  <div class="flex items-center gap-2.5">
+    <h3 class="text-secondaryGreyColor font-medium text-lg">{{ statusName() }}</h3>
+    <div class="flex items-center gap-1">
+      <img [src]="statusCaret() === 'caret-up'? '/admin/chevron-green.svg': '/admin/chevron-red.svg'"
+           alt="red chevron"/>
+      <h3 class="text-base {{statusCaret() === 'caret-up'?'text-[#2CC171]':'text-[#E27233]'}} font-medium">
+        {{ totalStatusCaret() }}
+      </h3>
+    </div>
+  </div>
+  <h2 class="text-2xl text-primaryDarkColor3 font-semibold mt-5">{{ totalStatus() }}</h2>
+</div>

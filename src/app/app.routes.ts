@@ -31,6 +31,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/book-details/book-details.component').then((mod) => mod.BookDetailsComponent)
   },
+  // Admin Dashboards
+  {
+    path: 'admin/home',
+    loadComponent: () =>
+      import('./admin/pages/home-dashboard/home-dashboard.component').then((mod) => mod.HomeDashboardComponent)
+  },
   {
     path: '**',
     loadComponent: () =>
