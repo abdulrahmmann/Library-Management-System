@@ -23,27 +23,27 @@
             <table class="min-w-[800px] w-full">
               <thead>
               <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Book Title</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Author</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Genre</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Date Created</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Action</th>
+                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Book Title</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Author</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Genre</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Created</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
               </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white w-full">
                 @for (book of allBooks; track book.id) {
                   <tr>
-                    <td class="w-[47%] whitespace-nowrap py-5 px-2 text-sm">
+                    <td class="w-[47%] whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2">
                         <img [src]="book.bookPoster" alt="" class="h-14"/>
                         <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.title}}</h2>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{book.author}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{book.author}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{book.dateCreated}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
-                      <div class="flex items-center gap-2">
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.author}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.genre}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.dateCreated | date}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      <div class="flex items-center gap-4">
                         <img src="/edit.svg" alt="" class="cursor-pointer"/>
                         <img src="/trash.svg" alt="" class="cursor-pointer"/>
                       </div>

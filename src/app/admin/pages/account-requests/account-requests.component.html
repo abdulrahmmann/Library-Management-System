@@ -1,3 +1,71 @@
 <app-admin-layout>
+  <div class="bg-white rounded-xl p-5">
 
+    <div class="flex items-center justify-between mb-5">
+      <h2 class="box-title">Account Registration Requests</h2>
+        <button
+          class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+          <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
+          <img src="/arrow-swap.svg" alt=""/>
+        </button>
+    </div>
+
+    <div>
+      <div class="flow-root">
+        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <table class="min-w-[800px] w-full">
+              <thead>
+              <tr class="bg-ghostWhiteColor">
+                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Joined</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID No </th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID Card</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
+              </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white w-full">
+                @for (account of allAccounts; track account.id) {
+                  <tr>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                      <div class="flex items-center gap-2">
+                        @if (account.profilePic) {
+                          <img
+                            [src]="account.profilePic"
+                            alt="account image"
+                            class="size-12 rounded-full"/>
+                        } @else {
+                          <div class="size-12 rounded-full flex items-center justify-center text-primaryDarkColor4 border-2 uppercase font-geist font-semibold text-xl"
+                               [class]="profilePicService.getStyles(account.name)">
+                            {{ account.name.slice(0, 2) }}</div>
+                        }
+                        <div>
+                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor4">{{account.name}}</h2>
+                          <p class="text-sm text-secondaryGreyColor">{{account.email}}</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.dateJoined | date }}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.universityId }}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                      <div class="flex items-center gap-1.5 cursor-pointer">
+                        <img src="/eye-blue.svg" alt="">
+                        <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                      <div class="flex items-center gap-2.5">
+                        <button class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#027A48] bg-[#ECFDF3] hover:bg-green-800 hover:text-ghostWhiteColor transition-all">Approve</button>
+                        <button class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">Deny</button>
+                      </div>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </app-admin-layout>

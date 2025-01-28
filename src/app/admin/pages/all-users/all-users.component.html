@@ -17,26 +17,26 @@
             <table class="min-w-[900px] w-full">
               <thead>
               <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Name</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Date Joined
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name</th>
+                <th scope="col" class="py-3.5 px-2 text-left tex font-normal text-primaryDarkColor4">Date Joined
                 </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Role</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Books
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Role</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Books
                   Borrowed
                 </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">University ID
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
                   No
                 </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">University ID
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
                   Card
                 </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-medium text-primaryDarkColor4">Action</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
               </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white w-full">
                 @for (user of allUsers; track user.id) {
                   <tr>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2">
                         @if (user.profilePic) {
                           <img
@@ -54,8 +54,8 @@
                         </div>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{ user.dateJoined | date }}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.dateJoined | date }}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       @if (user.role === 'user') {
                         <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#FDF2FA] text-[#C11574] text-sm font-medium">
                           {{user.role}}
@@ -66,15 +66,15 @@
                         </div>
                       }
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{ user.booksBorrowed }}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">{{ user.universityId }}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.booksBorrowed }}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.universityId }}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2 cursor-pointer">
                         <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
                         <img src="/view.svg" alt=""/>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm"><img src="/trash.svg" alt="" class="cursor-pointer"/></td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium"><img src="/trash.svg" alt="" class="cursor-pointer"/></td>
                   </tr>
                 }
               </tbody>
