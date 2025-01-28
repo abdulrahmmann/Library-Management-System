@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
 
 @Component({
   selector: 'app-account-requests',
-  imports: [],
+  imports: [
+    AdminLayoutComponent
+  ],
   templateUrl: './account-requests.component.html',
   styles: ``
 })

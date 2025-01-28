@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
 
 @Component({
   selector: 'app-borrow-requests',
-  imports: [],
+  imports: [
+    AdminLayoutComponent
+  ],
   templateUrl: './borrow-requests.component.html',
   styles: ``
 })
