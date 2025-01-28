@@ -12,7 +12,7 @@ font-family: 'IBM Plex Sans', 'Bebas Neue', 'Geist', sans-serif;
 }
 
 .box-title {
-  @apply text-lg font-semibold text-primaryDarkColor3;
+  @apply text-sm sm:text-lg font-semibold text-primaryDarkColor3;
 }
 
 

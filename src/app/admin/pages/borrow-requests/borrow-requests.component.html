@@ -1,3 +1,83 @@
 <app-admin-layout>
+  <div class="bg-white rounded-xl p-5">
 
+    <div class="flex items-center justify-between mb-5">
+      <h2 class="box-title">Borrow Book Requests</h2>
+      <button
+        class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+        <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
+        <img src="/arrow-swap.svg" alt=""/>
+      </button>
+    </div>
+
+    <div>
+      <div class="flow-root">
+        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <table class="min-w-[1050px] w-full">
+              <thead>
+              <tr class="bg-ghostWhiteColor">
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">User Requested</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Book</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Borrowed Status</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Borrowed date</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Return date</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Due Date</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Receipt</th>
+              </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white w-full">
+                @for (book of borrowedRequestsBooks; track book.id) {
+                  <tr>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      <div class="flex items-center gap-2">
+                        @if (book.userImage) {
+                          <img
+                            [src]="book.userImage"
+                            alt="account image"
+                            class="size-12 rounded-full"/>
+                        } @else {
+                          <div class="size-12 rounded-full flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
+                               [class]="profilePicService.getStyles(book.userName)">
+                            {{ book.userName.slice(0, 2) }}</div>
+                        }
+                        <div>
+                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor3">{{book.userName}}</h2>
+                          <p class="text-sm text-secondaryGreyColor">{{book.userEmail}}</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      <div class="flex items-center gap-2">
+                        <img alt="" class="h-12" [src]="book.bookImage">
+                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.bookName}}</h2>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      @if (book.borrowedStatus === "Borrowed") {
+                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#F9F5FF] text-[#6941C6] text-sm font-medium">Borrowed</div>
+                      } @else if (book.borrowedStatus === "Returned") {
+                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#F0F9FF] text-[#026AA2] text-sm font-medium">Returned</div>
+                      } @else {
+                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#FFF1F3] text-[#C01048] text-sm font-medium">Late Return</div>
+                      }
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.borrowedDate | date}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.returnDate | date}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.dueDate | date}}</td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      <button class="group hover:bg-[#25388C] transition-all flex items-center gap-2 px-3 py-2.5 bg-ghostWhiteColor rounded-lg">
+                        <img src="/receipt.svg" alt="" class="group-hover:filter group-hover:brightness-0 group-hover:invert" />
+                        <h2 class="text-sm text-[#25388C] group-hover:text-ghostWhiteColor font-semibold">Generate</h2>
+                      </button>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </app-admin-layout>
