@@ -1,12 +1,44 @@
-<section class="p-4 mb-4 bg-white rounded-xl" style="height: calc(100% - 432px);">
+<section class="p-4 bg-white rounded-xl"
+         [ngClass]="getAccountRequest.length === 0? 'h-[48%]': 'h-[calc(100% - 426px)]'">
   <div class="flex items-center justify-between mb-3.5">
     <h2 class="box-title">Account Requests</h2>
-    <a routerLink=""
+    <a routerLink="account-requests"
+       [routerLink]="getAccountRequest.length > 0 ? '/admin/account-requests' : null"
+       [ngClass]="getAccountRequest.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-[#F8F8FF] text-[#25388C]'"
+       [attr.disabled]="getAccountRequest.length === 0 ? true : null"
        class="text-sm font-bold text-[#25388C] px-3 py-2 bg-[#F8F8FF] rounded-lg">
       View all
     </a>
   </div>
-  <div>
 
-  </div>
+  @if (getAccountRequest.length > 0) {
+    <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3.5">
+      @for (account of getAccountRequest.slice(0, 6); track account.id) {
+        <article class="bg-ghostWhiteColor rounded-lg">
+          <div class="px-3 py-3.5">
+            @if (account.accountImage) {
+              <img
+                [src]="account.accountImage"
+                alt="account image"
+                class="size-12 rounded-full mx-auto"/>
+            } @else {
+              <div class="size-12 rounded-full mx-auto flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
+                   [class]="getStyles(account.accountName)">
+                {{ account.accountName.slice(0, 2) }}</div>
+            }
+            <h3 class="text-primaryDarkColor3 font-medium text-base mt-3 text-center">{{ account.accountName }}</h3>
+            <p class="text-xs text-secondaryGreyColor text-center">{{ account.accountEmail }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <div class="h-[85%] flex items-center justify-center">
+      <div class="text-center">
+        <img src="/admin/empty-acc-req.png" alt="" class="mx-auto" />
+        <h2 class="text-primaryDarkColor3 text-base font-semibold mt-5">No Pending Account Requests</h2>
+        <p class="text-sm text-secondaryGreyColor mt-1">There are currently no account requests awaiting approval.</p>
+      </div>
+    </div>
+  }
 </section>

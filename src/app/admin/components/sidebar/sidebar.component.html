@@ -1,19 +1,31 @@
-<aside class="fixed left-0 top-0 bottom-0 bg-white w-[288px] hidden xl:flex flex-col justify-between">
-  <nav class="p-4">
-    <div class="pb-4">
-      <img src="/admin/logo-admin.svg" alt="book wise admin logo" />
+<aside class="fixed left-0 top-0 bottom-0 bg-white w-[265px] hidden xl:flex flex-col justify-between">
+  <nav class="p-2">
+    <div class="pb-4 px-2">
+      <img src="/admin/logo-admin.svg" alt="book wise admin logo" class="mx-auto"/>
     </div>
     <div class="border-t-[2px] border-dashed border-[#8C8E98] pt-4">
       <ul class="flex flex-col items-start gap-2.5">
         @for (item of sidebarItems; track item.id) {
-          <li class="group px-3 py-4 w-full rounded-lg hover:bg-[#25388C] transition-all">
-            <a [routerLink]="item.route" routerLinkActive="" class="flex items-center gap-2.5">
+          <li
+            class="group px-3 py-4 w-full rounded-lg hover:bg-[#25388C] transition-all cursor-pointer"
+            [ngClass]="{ 'bg-[#25388C]': isActive(item.route) }"
+          >
+            <a
+              [routerLink]="item.route"
+              class="flex items-center gap-2.5"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
               <img
                 [src]="item.icon"
                 alt="home icon"
+                [ngClass]="{ 'filter brightness-0 invert': isActive(item.route) }"
                 class="group-hover:filter group-hover:brightness-0 group-hover:invert"
               />
-              <h3 class="text-base font-medium text-primaryDarkColor4 group-hover:text-white">
+              <h3
+                class="text-base font-medium text-primaryDarkColor4 group-hover:text-white"
+                [ngClass]="{ 'text-white': isActive(item.route) }"
+              >
                 {{ item.name }}
               </h3>
             </a>
@@ -22,10 +34,11 @@
       </ul>
     </div>
   </nav>
-  <div class="w-full p-2 mb-4 bg-white border-2 border-[#EDF1F1] rounded-[60px] mx-auto" style="width: calc(100% - 32px);">
+  <div class="w-full p-2 mb-4 bg-white border-2 border-[#EDF1F1] rounded-[60px] mx-auto"
+       style="width: calc(100% - 16px);">
     <div class="flex items-center justify-between gap-1">
       <div class="relative size-11">
-        <img src="/user.png" alt="user img" class="w-full h-full rounded-full" />
+        <img src="/user.png" alt="user img" class="w-full h-full rounded-full"/>
         <span class="size-4 rounded-full bg-[#2CC974] absolute bottom-0 right-0"></span>
       </div>
       <div class="max-w-[150px]">
@@ -33,7 +46,7 @@
         <p class="text-secondaryGreyColor text-sm truncate">abdulra7man#gmail.com</p>
       </div>
       <a routerLink="/">
-        <img src="/admin/logout-red.svg" alt="logout" />
+        <img src="/admin/logout-red.svg" alt="logout"/>
       </a>
     </div>
   </div>

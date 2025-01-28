@@ -1,10 +1,10 @@
-<article class="bg-[#F8F8FF] rounded-lg p-3.5 h-[100px] relative mb-3">
-  <div class="flex items-center gap-3">
+<article class="bg-[#F8F8FF] rounded-lg p-3.5 h-fit sm:h-[100px] relative">
+  <div class="flex flex-col xs:flex-row items-center gap-3">
     <img [src]="bookPoster()" alt="book poster"/>
     <div>
       <h2 class="text-base font-semibold text-primaryDarkColor3">{{ bookName() }}</h2>
 
-      <div class="my-1 flex items-center gap-4">
+      <div class="my-1 flex flex-col xs:flex-row items-center gap-1 xs:gap-4">
       <span class="text-sm text-[#64748B]">By {{ author() }}</span>
       <ul class="flex items-center gap-1">
         <span class="size-1 rounded-full bg-secondaryGreyColor"></span>
@@ -15,7 +15,7 @@
       </ul>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex flex-col xs:flex-row items-center gap-1 xs:gap-3">
         <div class="flex items-center gap-1">
           <img [src]="borrowedUserImg()" alt="user img" class="w-5 h-5 rounded-full" />
           <h4 class="text-xs text-[#3A354E] font-medium">{{borrowedUserName()}}</h4>
@@ -25,6 +25,7 @@
           <h4 class="text-xs text-[#3A354E] font-medium">{{borrowedDate() | date}}</h4>
         </div>
       </div>
+
     </div>
   </div>
 

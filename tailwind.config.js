@@ -37,6 +37,8 @@ module.exports = {
         inputColor: '#232839',
         buttonColor: '#E7C9A5',
         lightYellowColor: '#EED1AC',
+
+        ghostWhiteColor: '#F8F8FF',
       },
       backgroundImage: {
         'logo': "url('/book-wise-logo.png')",
@@ -51,6 +53,7 @@ module.exports = {
       fontFamily: {
         bebas: ['Bebas Neue', 'cursive'],
         plex: ['IBM Plex Sans', 'sans-serif'],
+        geist: ['Geist', 'sans-serif'],
       },
     },
   },

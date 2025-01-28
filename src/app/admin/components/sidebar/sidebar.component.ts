@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
   imports: [
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    NgClass,
   ],
   templateUrl: './sidebar.component.html',
 })
@@ -42,4 +44,10 @@ export class SidebarComponent {
       route: '/admin/account-requests',
     },
   ];
+
+  private router = inject(Router);
+
+  isActive(route: string): boolean {
+    return this.router.url === route;
+  }
 }

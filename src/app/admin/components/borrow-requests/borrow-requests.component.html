@@ -1,22 +1,35 @@
-<section class="p-4 mb-4 bg-white rounded-xl">
+<section class="p-4 mb-4 bg-white rounded-xl" [ngClass]="borrowRequestItems.length === 0? 'h-[50%]': 'h-fit'">
   <div class="flex items-center justify-between mb-3.5">
     <h2 class="box-title">Barrow Requests</h2>
-    <a routerLink=""
+    <a routerLink="borrow-requests"
+       [routerLink]="borrowRequestItems.length > 0 ? '/admin/borrow-requests' : null"
+       [ngClass]="borrowRequestItems.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-[#F8F8FF] text-[#25388C]'"
+       [attr.disabled]="borrowRequestItems.length === 0 ? true : null"
        class="text-sm font-bold text-[#25388C] px-3 py-2 bg-[#F8F8FF] rounded-lg">
       View all
     </a>
   </div>
-  <div>
-    @for (item of borrowRequestItems.slice(0,3); track item.id) {
-      <app-borrow-request-item
-        [bookName]="item.bookName"
-        [author]="item.author"
-        [bookPoster]="item.poster"
-        [borrowedDate]="item.dateBorrowed"
-        [borrowedUserImg]="item.userBorrowedImg"
-        [borrowedUserName]="item.userBorrowedName"
-        [genre]="item.genre">
-      </app-borrow-request-item>
-    }
-  </div>
+  @if (borrowRequestItems.length > 0) {
+    <div class="flex flex-col gap-3.5">
+      @for (item of borrowRequestItems.slice(0,3); track item.id) {
+        <app-borrow-request-item
+          [bookName]="item.bookName"
+          [author]="item.author"
+          [bookPoster]="item.poster"
+          [borrowedDate]="item.dateBorrowed"
+          [borrowedUserImg]="item.userBorrowedImg"
+          [borrowedUserName]="item.userBorrowedName"
+          [genre]="item.genre">
+        </app-borrow-request-item>
+      }
+    </div>
+  } @else {
+    <div class="h-[85%] flex items-center justify-center">
+      <div class="text-center">
+        <img src="/admin/empty-book-req.png" alt="" class="mx-auto" />
+        <h2 class="text-primaryDarkColor3 text-base font-semibold mt-5">No Pending Book Requests</h2>
+        <p class="text-sm text-secondaryGreyColor mt-1">There are no borrow book requests awaiting your review at this time.</p>
+      </div>
+    </div>
+  }
 </section>

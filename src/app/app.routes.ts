@@ -38,23 +38,28 @@ export const routes: Routes = [
       import('./admin/pages/home-dashboard/home-dashboard.component').then((mod) => mod.HomeDashboardComponent)
   },
   {
+    path: 'admin/all-users',
+    loadComponent: () =>
+      import('./admin/pages/all-users/all-users.component').then((mod) => mod.AllUsersComponent)
+  },
+  {
+    path: 'admin/all-books',
+    loadComponent: () =>
+      import('./admin/pages/all-books/all-books.component').then((mod) => mod.AllBooksComponent)
+  },
+  {
+    path: 'admin/borrow-requests',
+    loadComponent: () =>
+      import('./admin/pages/borrow-requests/borrow-requests.component').then((mod) => mod.BorrowRequestsComponent)
+  },
+  {
+    path: 'admin/account-requests',
+    loadComponent: () =>
+      import('./admin/pages/account-requests/account-requests.component').then((mod) => mod.AccountRequestsComponent)
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./pages/not-found/not-found.component').then((mod) => mod.NotFoundComponent)
   },
-  // {
-  //   path: 'about',
-  //   loadComponent: () =>
-  //     import('../app/home/home.component').then((mod) => mod.HomeComponent)
-  // },
-  // {
-  //   path: 'categories',
-  //   loadComponent: () =>
-  //     import('../app/home/home.component').then((mod) => mod.HomeComponent)
-  // },
-  // {
-  //   path: 'best-sellers',
-  //   loadComponent: () =>
-  //     import('../app/home/home.component').then((mod) => mod.HomeComponent)
-  // },
 ];
