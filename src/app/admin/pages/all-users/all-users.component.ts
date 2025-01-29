@@ -1,15 +1,36 @@
 import {Component, inject} from '@angular/core';
 import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
 import {AllUsersService} from './all-users.service';
-import {DatePipe} from '@angular/common';
+import {DatePipe, NgOptimizedImage} from '@angular/common';
 import {ProfilePicService} from '../../services/profile-pic.service';
 
+import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-ng/brain/dialog';
+import {
+  HlmDialogCloseDirective,
+  HlmDialogComponent,
+  HlmDialogContentComponent,
+  HlmDialogDescriptionDirective,
+  HlmDialogFooterComponent,
+  HlmDialogHeaderComponent,
+  HlmDialogTitleDirective,
+} from '@spartan-ng/ui-dialog-helm';
 
 @Component({
   selector: 'app-all-users',
   imports: [
     AdminLayoutComponent,
     DatePipe,
+    BrnDialogTriggerDirective,
+    BrnDialogContentDirective,
+    HlmDialogComponent,
+    HlmDialogContentComponent,
+    HlmDialogHeaderComponent,
+    HlmDialogFooterComponent,
+    HlmDialogTitleDirective,
+    HlmDialogDescriptionDirective,
+    HlmDialogContentComponent,
+    HlmDialogCloseDirective,
+    NgOptimizedImage,
   ],
   templateUrl: './all-users.component.html',
 })

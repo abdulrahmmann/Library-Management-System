@@ -1,0 +1,55 @@
+<app-admin-layout>
+
+  <button (click)="goBack()"
+    class="flex items-center gap-1 bg-white border border-ghostWhiteColor px-2.5 py-2.5 w-fit rounded-lg hover:bg-slate-00">
+    <img src="/arrow-left.svg" alt="">
+    <h3 class="text-sm font-medium text-primaryDarkColor4">Go back</h3>
+  </button>
+
+  <div class="mt-5">
+
+    <div class="flex flex-col sm:flex-row gap-x-5 gap-y-3 h-fit sm:h-[220px]">
+      <div class="w-[250px] h-full rounded-lg flex items-center justify-center bg-neutral-100">
+        <img [src]="book.bookPoster" alt="book poster" class="w-[125px] h-[170px]" />
+       </div>
+      <div class="h-full flex flex-col items-start justify-between">
+        <div class="flex items-center gap-2">
+          <h3 class="text-sm font-medium text-secondaryGreyColor">Created at:</h3>
+          <div class="flex items-center gap-1">
+            <img src="/admin/calender-icon.svg" alt="" />
+            <h3 class="text-xs text-primaryDarkColor4 font-medium">{{book.dateCreated}}</h3>
+          </div>
+        </div>
+        <h2 class="text-xl text-primaryDarkColor3 font-semibold">{{book.title}}</h2>
+        <h2 class="text-base text-primaryDarkColor3 font-semibold">By {{book.author}}</h2>
+        <p class="text-sm text-secondaryGreyColor">{{book.genre}}</p>
+        <button type="button" class="text-ghostWhiteColor text-sm font-bold p-3 w-full bg-[#25388C] hover:bg-[#25388C]/85 rounded-lg">
+          <img src="/edit-white.svg" alt="" class="inline-block mr-1">
+          Edit Book
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <div class="grid grid-cols-12 gap-x-10 gap-y-3">
+        <div class="col-span-12 sm:col-span-8">
+          <div>
+            <h2 class="text-base font-semibold text-primaryDarkColor3 mb-2">Summery</h2>
+            <p class="text-slate-500 text-sm leading-relaxed tracking-wide">
+              {{book.summery}}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-4">
+          <h2 class="text-base font-semibold text-primaryDarkColor3 mb-2">Video</h2>
+          <div class="h-[250px]">
+            <img [src]="book.bookVideo" alt="" class="h-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</app-admin-layout>

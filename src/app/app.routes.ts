@@ -54,7 +54,12 @@ export const routes: Routes = [
         path: 'create-new-book',
         loadComponent: () =>
           import('./admin/pages/create-new-book/create-new-book.component').then((mod) => mod.CreateNewBookComponent)
-      }
+      },
+      {
+        path: 'edit-book/:id',
+        loadComponent: () =>
+          import('./admin/pages/edit-book/edit-book.component').then((mod) => mod.EditBookComponent)
+      },
     ]
   },
   {

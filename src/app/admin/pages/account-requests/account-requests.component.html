@@ -17,7 +17,7 @@
             <table class="min-w-[800px] w-full">
               <thead>
               <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name
+                <th scope="col" class="w-[40%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name
                 </th>
                 <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Joined
                 </th>
@@ -60,21 +60,83 @@
                       class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.universityId }}
                     </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm">
-                      <div class="flex items-center gap-1.5 cursor-pointer">
-                        <img src="/eye-blue.svg" alt="">
-                        <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
-                      </div>
+                      <hlm-dialog>
+                        <button brnDialogTrigger>
+                          <div class="flex items-center gap-2 cursor-pointer">
+                            <img src="/eye-blue.svg" alt=""/>
+                            <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
+                          </div>
+                        </button>
+                        <hlm-dialog-content style="width: 500px !important; padding: 16px" class="w-[500px] justify-center" *brnDialogContent="let ctx">
+                          <hlm-dialog-header>
+
+                          </hlm-dialog-header>
+                          <div class="py-4 place-items-center">
+
+                          </div>
+                          <hlm-dialog-footer>
+
+                          </hlm-dialog-footer>
+                        </hlm-dialog-content>
+                      </hlm-dialog>
                     </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm">
                       <div class="flex items-center gap-2.5">
-                        <button
+
+                        <hlm-dialog>
+                          <button id="edit-profile" brnDialogTrigger
                           class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#027A48] bg-[#ECFDF3] hover:bg-green-800 hover:text-ghostWhiteColor transition-all">
-                          Approve
-                        </button>
-                        <button
-                          class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">
-                          Deny
-                        </button>
+                            Approve
+                          </button>
+                          <hlm-dialog-content style="width: 500px !important; padding: 16px" class="w-[500px] justify-center" *brnDialogContent="let ctx">
+                            <hlm-dialog-header>
+
+                            </hlm-dialog-header>
+                            <div class="py-4 place-items-center">
+                              <div class="size-28 rounded-full flex items-center justify-center bg-[#4C7B62]/10">
+                                <img src="/approve.svg" alt="" />
+                              </div>
+                              <div class="mt-5 text-center">
+                                <h2 class="text-lg font-semibold text-primaryDarkColor3">Approve Account Request</h2>
+                                <p class="mt-1 text-base text-[#64748B]">Approve the student’s account request and grant access. A confirmation email will be sent upon approval.</p>
+                              </div>
+                            </div>
+                            <hlm-dialog-footer>
+                              <button type="submit"
+                                      class="w-full text-sm font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#4C7B62] hover:bg-[#4C7B62]/85">
+                                Approve & Send Confirmation
+                              </button>
+                            </hlm-dialog-footer>
+                          </hlm-dialog-content>
+                        </hlm-dialog>
+
+                        <hlm-dialog>
+                          <button id="" brnDialogTrigger
+                                  class="w-full px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">
+                            Deny
+                          </button>
+                          <hlm-dialog-content style="width: 500px !important; padding: 16px" class="w-[500px] justify-center" *brnDialogContent="let ctx">
+                            <hlm-dialog-header>
+
+                            </hlm-dialog-header>
+                            <div class="py-4 place-items-center">
+                              <div class="size-28 rounded-full flex items-center justify-center bg-[#F46F70]/10">
+                                <img src="/deny.svg" alt="" />
+                              </div>
+                              <div class="mt-5 text-center">
+                                <h2 class="text-base font-semibold text-primaryDarkColor3">Deny Account Request</h2>
+                                <p class="mt-1 text-base text-[#64748B]">Denying this request will notify the student they’re not eligible due to unsuccessful ID card verification.</p>
+                              </div>
+                            </div>
+                            <hlm-dialog-footer>
+                              <button type="submit"
+                                      class="w-full text-sm font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#F46F70] hover:bg-[#F46F70]/85">
+                                Deny & Notify Student
+                              </button>
+                            </hlm-dialog-footer>
+                          </hlm-dialog-content>
+                        </hlm-dialog>
+
                       </div>
                     </td>
                   </tr>

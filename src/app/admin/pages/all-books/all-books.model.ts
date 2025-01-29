@@ -6,4 +6,6 @@ export interface BooksModel {
   author: string;
   genre: string[];
   dateCreated: string;
+  summery: string;
+  bookVideo: string;
 }

@@ -9,8 +9,9 @@
           <h3 class="font-medium text-primaryDarkColor4 text-sm">A-Z</h3>
           <img src="/arrow-swap.svg" alt=""/>
         </button>
-        <a routerLink="create-new-book" class="px-4 py-2 bg-[#25388C] hover:bg-[#25388C]/90 rounded-lg flex items-center gap-2">
-          <img src="/plus-white.svg" alt="" />
+        <a routerLink="create-new-book"
+           class="px-4 py-2 bg-[#25388C] hover:bg-[#25388C]/90 rounded-lg flex items-center gap-2">
+          <img src="/plus-white.svg" alt=""/>
           <h3 class="text-white font-medium text-sm">Create a New Book</h3>
         </a>
       </div>
@@ -23,10 +24,13 @@
             <table class="min-w-[800px] w-full">
               <thead>
               <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Book Title</th>
+                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Book
+                  Title
+                </th>
                 <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Author</th>
                 <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Genre</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Created</th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Created
+                </th>
                 <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
               </tr>
               </thead>
@@ -36,16 +40,58 @@
                     <td class="w-[47%] whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2">
                         <img [src]="book.bookPoster" alt="" class="h-14"/>
-                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.title}}</h2>
+                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{ book.title }}</h2>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.author}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.genre}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.dateCreated | date}}</td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.author }}
+                    </td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.genre }}
+                    </td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.dateCreated | date }}
+                    </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-4">
-                        <img src="/edit.svg" alt="" class="cursor-pointer"/>
-                        <img src="/trash.svg" alt="" class="cursor-pointer"/>
+                        <a [routerLink]="['edit-book/', book.id]">
+                          <img src="/edit.svg" alt="" class="cursor-pointer"/>
+                        </a>
+                        <hlm-dialog>
+                          <button id="" brnDialogTrigger>
+                            <img src="/trash.svg" alt="" class="cursor-pointer"/>
+                          </button>
+                          <hlm-dialog-content style="width: 500px !important; padding: 16px"
+                                              class="w-[500px] justify-center" *brnDialogContent="let ctx">
+                            <hlm-dialog-header>
+
+                            </hlm-dialog-header>
+                            <div class="py-4 place-items-center">
+                              <div class="size-28 rounded-full flex items-center justify-center bg-[#F46F70]/10">
+                                <img src="/deny.svg" alt=""/>
+                              </div>
+                              <div class="mt-5 text-center">
+                                <h2 class="text-base font-semibold text-primaryDarkColor3">Are You Sure to Remove
+                                  '{{ book.title }}' book from system?</h2>
+                                <p class="mt-1 text-sm text-[#64748B]">
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda beatae
+                                  blanditiis consectetur cumque delectus doloremque est magni molestias.
+                                </p>
+                              </div>
+                            </div>
+                            <hlm-dialog-footer>
+                              <button type="submit"
+                                      class="w-full text-base font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#F46F70] hover:bg-[#F46F70]/85">
+                                Remove Book
+                              </button>
+
+                              <button type="button"
+                                      class="w-full text-base font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#757575] hover:bg-[#9E9E9E]">
+                                Cancel
+                              </button>
+                            </hlm-dialog-footer>
+                          </hlm-dialog-content>
+                        </hlm-dialog>
                       </div>
                     </td>
                   </tr>
