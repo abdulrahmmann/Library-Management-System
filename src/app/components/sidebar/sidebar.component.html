@@ -7,6 +7,7 @@
       <ul class="flex flex-col items-start gap-2.5">
         @for (item of sidebarItems; track item.id) {
           <li
+            [routerLink]="item.route"
             class="group px-3 py-4 w-full rounded-lg hover:bg-[#25388C] transition-all cursor-pointer"
             [ngClass]="{ 'bg-[#25388C]': isActive(item.route) }"
           >

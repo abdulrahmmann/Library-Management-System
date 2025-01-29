@@ -9,10 +9,10 @@
           <h3 class="font-medium text-primaryDarkColor4 text-sm">A-Z</h3>
           <img src="/arrow-swap.svg" alt=""/>
         </button>
-        <button class="px-4 py-2 bg-[#25388C] hover:bg-[#25388C]/90 rounded-lg flex items-center gap-2">
+        <a routerLink="create-new-book" class="px-4 py-2 bg-[#25388C] hover:bg-[#25388C]/90 rounded-lg flex items-center gap-2">
           <img src="/plus-white.svg" alt="" />
           <h3 class="text-white font-medium text-sm">Create a New Book</h3>
-        </button>
+        </a>
       </div>
     </div>
 
@@ -52,6 +52,28 @@
                 }
               </tbody>
             </table>
+            <div class="flex items-center justify-end gap-3 py-6">
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/left-arrow.svg" alt="previous arrow">
+              </button>
+              <button
+                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
+                1
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                ...
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                7
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/right-arrow.svg" alt="next arrow">
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,21 @@
+<div class="mb-5">
+  <label class="label">Upload an Image</label>
+  <label
+    for="bookImage"
+    class="input flex flex-col items-center justify-center w-full border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100"
+  >
+    <div class="flex items-center gap-2">
+      <!-- Upload Icon -->
+      <img src="/img-upload.svg" alt="Upload"/>
+      <span class="text-xs font-medium text-slate-500">Upload an image</span>
+    </div>
+    <input
+      id="bookImage"
+      type="image"
+      name="bookImage"
+      formControlName="bookImageControl"
+      class="hidden"
+      accept="image/*"
+     alt=""/>
+  </label>
+</div>

@@ -30,6 +30,12 @@
       ],
       "@spartan-ng/ui-scrollarea-helm": [
         ".\\libs/ui/ui-scrollarea-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-sonner-helm": [
+        ".\\libs/ui/ui-sonner-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-dialog-helm": [
+        ".\\libs/ui/ui-dialog-helm/src/index.ts"
       ]
     }
   },

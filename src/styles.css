@@ -14,6 +14,12 @@ font-family: 'IBM Plex Sans', 'Bebas Neue', 'Geist', sans-serif;
 .box-title {
   @apply text-sm sm:text-lg font-semibold text-primaryDarkColor3;
 }
+.label {
+  @apply w-full mb-2 text-primaryDarkColor3 text-base font-medium block ml-1;
+}
+.input {
+  @apply w-full p-4 bg-[#F9FAFB] rounded-md border border-[#CBD5E1] min-h-[53px] text-sm   focus:ring-2 focus:ring-neutral-200 outline-none;
+}
 
 
 :root {

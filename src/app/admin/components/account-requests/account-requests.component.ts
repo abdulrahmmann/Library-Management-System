@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {AccountRequestsService} from './account-requests.service';
+import {AccountRequestsService} from '../../services/account-requests.service';
 import {NgClass} from '@angular/common';
 import {ProfilePicService} from '../../services/profile-pic.service';
 

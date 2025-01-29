@@ -31,6 +31,12 @@
                   <tr>
                     <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2">
+                        <img alt="" class="h-12" [src]="book.bookImage">
+                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.bookName}}</h2>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+                      <div class="flex items-center gap-2">
                         @if (book.userImage) {
                           <img
                             [src]="book.userImage"
@@ -45,12 +51,6 @@
                           <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor3">{{book.userName}}</h2>
                           <p class="text-sm text-secondaryGreyColor">{{book.userEmail}}</p>
                         </div>
-                      </div>
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      <div class="flex items-center gap-2">
-                        <img alt="" class="h-12" [src]="book.bookImage">
-                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.bookName}}</h2>
                       </div>
                     </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
@@ -75,6 +75,28 @@
                 }
               </tbody>
             </table>
+            <div class="flex items-center justify-end gap-3 py-6">
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/left-arrow.svg" alt="previous arrow">
+              </button>
+              <button
+                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
+                1
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                ...
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                7
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/right-arrow.svg" alt="next arrow">
+              </button>
+            </div>
           </div>
         </div>
       </div>

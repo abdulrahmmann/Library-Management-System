@@ -44,8 +44,18 @@ export const routes: Routes = [
   },
   {
     path: 'admin/all-books',
-    loadComponent: () =>
-      import('./admin/pages/all-books/all-books.component').then((mod) => mod.AllBooksComponent)
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./admin/pages/all-books/all-books.component').then((mod) => mod.AllBooksComponent)
+      },
+      {
+        path: 'create-new-book',
+        loadComponent: () =>
+          import('./admin/pages/create-new-book/create-new-book.component').then((mod) => mod.CreateNewBookComponent)
+      }
+    ]
   },
   {
     path: 'admin/borrow-requests',

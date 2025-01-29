@@ -3,9 +3,9 @@
     <h2 class="box-title">Barrow Requests</h2>
     <a routerLink="borrow-requests"
        [routerLink]="borrowRequestItems.length > 0 ? '/admin/borrow-requests' : null"
-       [ngClass]="borrowRequestItems.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-[#F8F8FF] text-[#25388C]'"
+       [ngClass]="borrowRequestItems.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-ghostWhiteColor text-[#25388C]'"
        [attr.disabled]="borrowRequestItems.length === 0 ? true : null"
-       class="text-sm font-bold text-[#25388C] px-3 py-2 bg-[#F8F8FF] rounded-lg">
+       class="text-sm font-bold text-[#25388C] px-3 py-2 bg-ghostWhiteColor rounded-lg">
       View all
     </a>
   </div>

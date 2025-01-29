@@ -3,11 +3,11 @@
 
     <div class="flex items-center justify-between mb-5">
       <h2 class="box-title">Account Registration Requests</h2>
-        <button
-          class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
-          <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
-          <img src="/arrow-swap.svg" alt=""/>
-        </button>
+      <button
+        class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+        <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
+        <img src="/arrow-swap.svg" alt=""/>
+      </button>
     </div>
 
     <div>
@@ -17,10 +17,16 @@
             <table class="min-w-[800px] w-full">
               <thead>
               <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Joined</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID No </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID Card</th>
+                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name
+                </th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Joined
+                </th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
+                  No
+                </th>
+                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
+                  Card
+                </th>
                 <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
               </tr>
               </thead>
@@ -35,18 +41,24 @@
                             alt="account image"
                             class="size-12 rounded-full"/>
                         } @else {
-                          <div class="size-12 rounded-full flex items-center justify-center text-primaryDarkColor4 border-2 uppercase font-geist font-semibold text-xl"
-                               [class]="profilePicService.getStyles(account.name)">
-                            {{ account.name.slice(0, 2) }}</div>
+                          <div
+                            class="size-12 rounded-full flex items-center justify-center text-primaryDarkColor4 border-2 uppercase font-geist font-semibold text-xl"
+                            [class]="profilePicService.getStyles(account.name)">
+                            {{ account.name.slice(0, 2) }}
+                          </div>
                         }
                         <div>
-                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor4">{{account.name}}</h2>
-                          <p class="text-sm text-secondaryGreyColor">{{account.email}}</p>
+                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor4">{{ account.name }}</h2>
+                          <p class="text-sm text-secondaryGreyColor">{{ account.email }}</p>
                         </div>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.dateJoined | date }}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.universityId }}</td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.dateJoined | date }}
+                    </td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.universityId }}
+                    </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm">
                       <div class="flex items-center gap-1.5 cursor-pointer">
                         <img src="/eye-blue.svg" alt="">
@@ -55,14 +67,42 @@
                     </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm">
                       <div class="flex items-center gap-2.5">
-                        <button class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#027A48] bg-[#ECFDF3] hover:bg-green-800 hover:text-ghostWhiteColor transition-all">Approve</button>
-                        <button class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">Deny</button>
+                        <button
+                          class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#027A48] bg-[#ECFDF3] hover:bg-green-800 hover:text-ghostWhiteColor transition-all">
+                          Approve
+                        </button>
+                        <button
+                          class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">
+                          Deny
+                        </button>
                       </div>
                     </td>
                   </tr>
                 }
               </tbody>
             </table>
+            <div class="flex items-center justify-end gap-3 py-6">
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/left-arrow.svg" alt="previous arrow">
+              </button>
+              <button
+                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
+                1
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                ...
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                7
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/right-arrow.svg" alt="next arrow">
+              </button>
+            </div>
           </div>
         </div>
       </div>

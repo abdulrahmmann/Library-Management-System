@@ -44,41 +44,74 @@
                             alt="account image"
                             class="size-12 rounded-full"/>
                         } @else {
-                          <div class="size-12 rounded-full flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
-                               [class]="profilePicService.getStyles(user.name)">
-                            {{ user.name.slice(0, 2) }}</div>
+                          <div
+                            class="size-12 rounded-full flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
+                            [class]="profilePicService.getStyles(user.name)">
+                            {{ user.name.slice(0, 2) }}
+                          </div>
                         }
                         <div>
-                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor3">{{user.name}}</h2>
-                          <p class="text-sm text-secondaryGreyColor">{{user.email}}</p>
+                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor3">{{ user.name }}</h2>
+                          <p class="text-sm text-secondaryGreyColor">{{ user.email }}</p>
                         </div>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.dateJoined | date }}</td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.dateJoined | date }}
+                    </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       @if (user.role === 'user') {
-                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#FDF2FA] text-[#C11574] text-sm font-medium">
-                          {{user.role}}
+                        <div
+                          class="w-fit px-4 py-1 rounded-3xl text-center bg-[#FDF2FA] text-[#C11574] text-sm font-medium">
+                          {{ user.role }}
                         </div>
                       } @else {
-                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#ECFDF3] text-[#027A48] text-sm font-medium">
-                          {{user.role}}
+                        <div
+                          class="w-fit px-4 py-1 rounded-3xl text-center bg-[#ECFDF3] text-[#027A48] text-sm font-medium">
+                          {{ user.role }}
                         </div>
                       }
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.booksBorrowed }}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.universityId }}</td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.booksBorrowed }}
+                    </td>
+                    <td
+                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ user.universityId }}
+                    </td>
                     <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
                       <div class="flex items-center gap-2 cursor-pointer">
                         <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
                         <img src="/view.svg" alt=""/>
                       </div>
                     </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium"><img src="/trash.svg" alt="" class="cursor-pointer"/></td>
+                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium"><img
+                      src="/trash.svg" alt="" class="cursor-pointer"/></td>
                   </tr>
                 }
               </tbody>
             </table>
+            <div class="flex items-center justify-end gap-3 py-6">
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/left-arrow.svg" alt="previous arrow">
+              </button>
+              <button
+                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
+                1
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                ...
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
+                7
+              </button>
+              <button
+                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
+                src="/right-arrow.svg" alt="next arrow">
+              </button>
+            </div>
           </div>
         </div>
       </div>

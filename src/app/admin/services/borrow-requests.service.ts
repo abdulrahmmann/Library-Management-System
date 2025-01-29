@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {BarrowRequestsModel} from './barrow-requests.model';
+import {BarrowRequestsModel} from '../models/barrow-requests.model';
 
 @Injectable({
   providedIn: 'root'

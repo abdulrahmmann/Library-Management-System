@@ -1,7 +1,7 @@
 import {Component, inject, signal} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {RecentlyAddedBooksService} from './recently-added-books.service';
-import {RecentlyAddedBooksModel} from './recently-added-books.model';
+import {RecentlyAddedBooksService} from '../../services/recently-added-books.service';
+import {RecentlyAddedBooksModel} from '../../models/recently-added-books.model';
 import {RecentlyAddedBooksItemComponent} from '../recently-added-books-item/recently-added-books-item.component';
 
 @Component({
