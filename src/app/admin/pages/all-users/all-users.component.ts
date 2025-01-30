@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
-import {AllUsersService} from './all-users.service';
+import {AllUsersService} from '../../services/all-users.service';
 import {DatePipe, NgOptimizedImage} from '@angular/common';
 import {ProfilePicService} from '../../services/profile-pic.service';
 

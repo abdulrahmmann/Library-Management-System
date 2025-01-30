@@ -1,0 +1,128 @@
+<app-admin-layout>
+
+  <button
+    (click)="goBack()"
+    class="flex items-center gap-1 bg-white border border-ghostWhiteColor px-2.5 py-2.5 w-fit  rounded-lg hover:bg-slate-00">
+    <img ngSrc="/arrow-left.svg" alt="" height="18" width="18"/>
+    <h3 class="text-sm font-medium text-primaryDarkColor4">Go back</h3>
+  </button>
+
+  <div class="mt-10">
+    <form [formGroup]="editBookForm" (ngSubmit)="onSubmit()" class="max-w-[700px]">
+
+      <div class="mb-5">
+        <label for="bookTitle" class="label">Book Title</label>
+        <input
+          id="bookTitle"
+          type="text"
+          [formControl]="editBookForm.controls.bookTitleControl"
+          class="input"
+          placeholder="Enter the book title"
+        />
+      </div>
+
+      <div class="mb-5">
+        <label for="bookAuthor" class="label">Author</label>
+        <input
+          id="bookAuthor"
+          type="text"
+          [formControl]="editBookForm.controls.bookAuthorControl"
+          class="input"
+          placeholder="Enter the author name"
+        />
+      </div>
+
+      <div class="mb-5">
+        <label for="bookGenre" class="label">Genre</label>
+        <input
+          id="bookGenre"
+          type="text"
+          [formControl]="editBookForm.controls.bookGenreControl"
+          class="input"
+          placeholder="Enter the genre of the book"
+        />
+      </div>
+
+      <div class="mb-5">
+        <label for="bookTotal" class="label">Total number of books</label>
+        <input
+          id="bookTotal"
+          type="number"
+          [formControl]="editBookForm.controls.bookTotalControl"
+          class="input"
+          placeholder="Enter the total number of books"
+        />
+      </div>
+
+      <div class="mb-5">
+        <label class="label">Upload an Image</label>
+        <label for="bookImage"
+               style="border-width: 2px !important"
+               class="input h-32 flex flex-col items-center justify-center w-full border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100">
+          <div class="flex items-center gap-2">
+            <img ngSrc="/img-upload.svg" alt="Upload" height="18" width="19"/>
+            <span class="text-xs font-medium text-slate-500">Upload an image</span>
+          </div>
+          <input
+            id="bookImage"
+            type="image"
+            name="bookImage"
+            [formControl]="editBookForm.controls.bookImageControl"
+            class="hidden"
+            accept="image/*"
+            alt=""/>
+        </label>
+      </div>
+
+      <div class="mb-5">
+        <label class="label">Book Video</label>
+        <label
+          for="bookVideo"
+          style="border-width: 2px !important"
+          class="input h-32 flex flex-col items-center justify-center w-full border-4 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100"
+        >
+          <div class="flex items-center gap-2">
+            <img ngSrc="/img-upload.svg" alt="Upload" height="18" width="19"/>
+            <span class="text-xs font-medium text-slate-500">Upload a video</span>
+          </div>
+          <input
+            id="bookVideo"
+            type="file"
+            name="bookVideo"
+            [formControl]="editBookForm.controls.bookVideoControl"
+            class="hidden"
+            accept="video/mp4/*"
+          />
+        </label>
+      </div>
+
+      <div class="mb-5">
+        <label for="bookColor" class="label">Book Primary Color</label>
+        <div class="input">
+          <input
+            id="bookColor"
+            type="color"
+            name="book color"
+            [formControl]="editBookForm.controls.bookColorControl"
+            class="size-5 cursor-pointer rounded-md"
+          />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="bookSummary" class="label">Book Summary</label>
+        <textarea
+          id="bookSummary"
+          [formControl]="editBookForm.controls.bookSummaryControl"
+          class="input h-[200px]"
+          placeholder="Write a brief summary of the book"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="text-ghostWhiteColor text-base font-bold p-3.5 w-full bg-[#25388C] rounded-lg">Create Book</button>
+
+    </form>
+  </div>
+
+</app-admin-layout>

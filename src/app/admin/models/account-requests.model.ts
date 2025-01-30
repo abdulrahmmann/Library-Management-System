@@ -1,8 +1,9 @@
 
 export interface AccountRequestsModel {
   id: number;
-  accountName: string;
-  accountEmail: string;
-  accountType: 'user' | 'admin';
-  accountImage?: string;
+  name: string;
+  email: string;
+  profilePic?: string;
+  dateJoined: string;
+  universityId: number;
 }

@@ -23,10 +23,11 @@
         <h2 class="text-xl text-primaryDarkColor3 font-semibold">{{book.title}}</h2>
         <h2 class="text-base text-primaryDarkColor3 font-semibold">By {{book.author}}</h2>
         <p class="text-sm text-secondaryGreyColor">{{book.genre}}</p>
-        <button type="button" class="text-ghostWhiteColor text-sm font-bold p-3 w-full bg-[#25388C] hover:bg-[#25388C]/85 rounded-lg">
+        <a [routerLink]="['/admin/all-books/edit-book', bookId, 'edit-book-details']"
+           class="block text-center text-ghostWhiteColor text-sm font-bold p-3 w-full bg-[#25388C] hover:bg-[#25388C]/85 rounded-lg">
           <img src="/edit-white.svg" alt="" class="inline-block mr-1">
           Edit Book
-        </button>
+        </a>
       </div>
     </div>
 

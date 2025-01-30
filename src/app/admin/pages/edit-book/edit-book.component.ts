@@ -1,13 +1,14 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
 import {Location} from '@angular/common';
-import {ActivatedRoute} from '@angular/router';
-import {AllBooksService} from '../all-books/all-books.service';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {AllBooksService} from '../../services/all-books.service';
 
 @Component({
   selector: 'app-edit-book',
   imports: [
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    RouterLink
   ],
   templateUrl: './edit-book.component.html',
 })

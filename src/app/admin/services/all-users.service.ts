@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
-import {AccountRequestsModel} from './account-requests.model';
+import {AllUsersModel} from '../models/all-users.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AccountRequestsService {
-  private _allAccountRequests: AccountRequestsModel[] = [
+export class AllUsersService {
+  private _allUsers: AllUsersModel[] = [
     {
       id: 1,
       name: "Alice Johnson",
       email: "alice.johnson@example.com",
       profilePic: "/user.png",
       dateJoined: "2023-02-15",
+      role: "Admin",
+      booksBorrowed: "5",
       universityId: 90324423789
     },
     {
@@ -20,6 +22,8 @@ export class AccountRequestsService {
       email: "bob.smith@example.com",
       profilePic: "/user4.png",
       dateJoined: "2023-03-10",
+      role: "user",
+      booksBorrowed: "2",
       universityId: 90024423789
     },
     {
@@ -27,6 +31,8 @@ export class AccountRequestsService {
       name: "Clara Adams",
       email: "clara.adams@example.com",
       dateJoined: "2023-01-25",
+      role: "user",
+      booksBorrowed: "7",
       universityId: 90324423789
     },
     {
@@ -35,6 +41,8 @@ export class AccountRequestsService {
       email: "daniel.baker@example.com",
       profilePic: "/user4.png",
       dateJoined: "2022-11-20",
+      role: "Admin",
+      booksBorrowed: "10",
       universityId: 90324423789
     },
     {
@@ -43,6 +51,8 @@ export class AccountRequestsService {
       email: "eva.green@example.com",
       profilePic: "/user3.png",
       dateJoined: "2023-05-18",
+      role: "user",
+      booksBorrowed: "4",
       universityId: 90324423789
     },
     {
@@ -50,6 +60,8 @@ export class AccountRequestsService {
       name: "Frank Thomas",
       email: "frank.thomas@example.com",
       dateJoined: "2023-06-22",
+      role: "user",
+      booksBorrowed: "3",
       universityId: 90324423789
     },
     {
@@ -58,6 +70,8 @@ export class AccountRequestsService {
       email: "grace.lee@example.com",
       profilePic: "/user3.png",
       dateJoined: "2023-07-05",
+      role: "Admin",
+      booksBorrowed: "12",
       universityId: 90324423789
     },
     {
@@ -65,6 +79,8 @@ export class AccountRequestsService {
       name: "Henry Wilson",
       email: "henry.wilson@example.com",
       dateJoined: "2023-04-01",
+      role: "user",
+      booksBorrowed: "1",
       universityId: 90324423789
     },
     {
@@ -73,6 +89,8 @@ export class AccountRequestsService {
       email: "isabella.moore@example.com",
       profilePic: "/user2.png",
       dateJoined: "2023-08-12",
+      role: "user",
+      booksBorrowed: "6",
       universityId: 90324423789
     },
     {
@@ -81,16 +99,14 @@ export class AccountRequestsService {
       email: "jack.white@example.com",
       profilePic: "/user.png",
       dateJoined: "2023-09-09",
+      role: "Admin",
+      booksBorrowed: "8",
       universityId: 90324423789
     }
   ];
 
-  get getAllAccountsRequests(): AccountRequestsModel[] {
-    return this._allAccountRequests;
+  get getAllUsers(): AllUsersModel[] {
+    return this._allUsers;
   }
-
-  // Approve Account Method
-
-  // Deny Account Method
 
 }

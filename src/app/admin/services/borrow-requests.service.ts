@@ -1,45 +1,130 @@
 import {Injectable} from '@angular/core';
-import {BarrowRequestsModel} from '../models/barrow-requests.model';
+import {BorrowRequestsModel} from '../models/borrow-requests.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BorrowRequestsService {
-  private borrowedRequests: BarrowRequestsModel[] = [
+  private _borrowRequestsService: BorrowRequestsModel[] = [
     {
       id: 1,
-      bookName: 'Inside Evil: Inside Evil Series, Book 1',
-      author: 'Rachel Heng',
-      poster: '/book-all-con.png',
-      genre: ['Strategic', 'Fantasy'],
-      dateBorrowed: '12/01/24',
-      userBorrowedName: 'Darrell Stewards',
-      userBorrowedImg: '/user.png'
+      bookName: "The Great Gatsby",
+      bookImage: "/book-all-con.png",
+      userName: "Alice Johnson",
+      userEmail: "alice.johnson@example.com",
+      userImage: "/user3.png",
+      borrowedStatus: "Borrowed",
+      borrowedDate: "2025-01-15",
+      returnDate: "2025-01-15",
+      dueDate: "2025-02-15",
     },
     {
       id: 2,
-      bookName: 'Jayne Castle - People in Glass Houses',
-      author: 'Rachel Heng',
-      poster: '/book-all-con2.png',
-      genre: ['Strategic', 'Fantasy'],
-      dateBorrowed: '12/01/24',
-      userBorrowedName: 'Darrell Stewards',
-      userBorrowedImg: '/user.png'
+      bookName: "A Novel by",
+      bookImage: "/book-all-con2.png",
+      userName: "Bob Smith",
+      userEmail: "bob.smith@example.com",
+      userImage: "/user3.png",
+      borrowedStatus: "Returned",
+      borrowedDate: "2025-01-01",
+      returnDate: "2025-01-20",
+      dueDate: "2025-01-15",
     },
     {
       id: 3,
-      bookName: 'Inside Evil: Inside Evil Series, Book 1',
-      author: 'Rachel Heng',
-      poster: '/book-all-con3.png',
-      genre: ['Strategic', 'Fantasy'],
-      dateBorrowed: '12/01/24',
-      userBorrowedName: 'Darrell Stewards',
-      userBorrowedImg: '/user.png'
+      bookName: "To Kill a Mockingbird",
+      bookImage: "/book-all-con3.png",
+      userName: "Charlie Brown",
+      userEmail: "charlie.brown@example.com",
+      borrowedStatus: "Late Return",
+      borrowedDate: "2024-12-10",
+      returnDate: "2025-01-25",
+      dueDate: "2025-01-10",
+    },
+    {
+      id: 4,
+      bookName: "Pride and Prejudice",
+      bookImage: "/book-all-con.png",
+      userName: "Mel Prince",
+      userEmail: "diana.prince@example.com",
+      borrowedStatus: "Borrowed",
+      borrowedDate: "2025-01-20",
+      returnDate: "2025-01-15",
+      dueDate: "2025-02-20",
+    },
+    {
+      id: 5,
+      bookName: "The Great Reclamation",
+      bookImage: "/book-all-con.png",
+      userName: "Ethan Hunt",
+      userEmail: "ethan.hunt@example.com",
+      borrowedStatus: "Returned",
+      borrowedDate: "2024-12-15",
+      returnDate: "2025-01-05",
+      dueDate: "2025-01-01",
+      userImage: "/user3.png",
+    },
+    {
+      id: 6,
+      bookName: "The Catcher in the Rye",
+      bookImage: "/book-all-con3.png",
+      userName: "Yara Gallagher",
+      userEmail: "fiona.gallagher@example.com",
+      borrowedStatus: "Late Return",
+      borrowedDate: "2024-11-25",
+      returnDate: "2025-01-15",
+      dueDate: "2024-12-25",
+    },
+    {
+      id: 7,
+      bookName: "War and Peace",
+      bookImage: "/book-all-con2.png",
+      userName: "George Orwell",
+      userEmail: "george.orwell@example.com",
+      borrowedStatus: "Borrowed",
+      borrowedDate: "2025-01-10",
+      returnDate: "2025-01-15",
+      dueDate: "2025-02-10",
+      userImage: "/user3.png",
+    },
+    {
+      id: 8,
+      bookName: "Jayne Castle",
+      bookImage: "/book-all-con2.png",
+      userName: "Hannah Baker",
+      userEmail: "hannah.baker@example.com",
+      borrowedStatus: "Borrowed",
+      borrowedDate: "2025-01-25",
+      returnDate: "2025-01-15",
+      dueDate: "2025-02-25",
+    },
+    {
+      id: 9,
+      bookName: "Crime and Punishment",
+      bookImage: "/book-all-con.png",
+      userName: "Ian Fleming",
+      userEmail: "ian.fleming@example.com",
+      userImage: "/user3.png",
+      borrowedStatus: "Returned",
+      borrowedDate: "2024-12-20",
+      returnDate: "2025-01-05",
+      dueDate: "2025-01-01",
+    },
+    {
+      id: 10,
+      bookName: "People in Glass Houses",
+      bookImage: "/book-all-con3.png",
+      userName: "Tomas Sparrow",
+      userEmail: "jack.sparrow@example.com",
+      borrowedStatus: "Late Return",
+      borrowedDate: "2024-12-01",
+      returnDate: "2025-01-10",
+      dueDate: "2024-12-31",
     },
   ];
 
-  // get all borrowed requests
-  get borrowedRequestsBooks(): BarrowRequestsModel[] {
-    return this.borrowedRequests;
+  get getAllBorrowedRequests(): BorrowRequestsModel[] {
+    return this._borrowRequestsService;
   }
+
 }

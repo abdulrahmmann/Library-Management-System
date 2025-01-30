@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
-import {AllBooksService} from './all-books.service';
+import {AllBooksService} from '../../services/all-books.service';
 import {DatePipe} from '@angular/common';
 import {RouterLink} from '@angular/router';
 

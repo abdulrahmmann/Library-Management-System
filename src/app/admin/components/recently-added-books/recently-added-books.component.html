@@ -7,17 +7,17 @@
     </a>
   </div>
 
-  <div class="p-4 bg-bg-ghostWhiteColor border border-bg-ghostWhiteColor rounded-lg mb-3.5">
-    <div class="flex items-center gap-3.5">
-      <button class="bg-white rounded-full size-12 flex items-center justify-center">
-        <img src="/admin/plus-icon.svg" alt="plus icon" />
-      </button>
-      <h2 class="box-title">Add New Book</h2>
-    </div>
-  </div>
+<!--  <div class="p-4 bg-bg-ghostWhiteColor border border-bg-ghostWhiteColor rounded-lg mb-3.5">-->
+<!--    <div class="flex items-center gap-3.5">-->
+<!--      <button class="bg-white rounded-full size-12 flex items-center justify-center">-->
+<!--        <img src="/admin/plus-icon.svg" alt="plus icon" />-->
+<!--      </button>-->
+<!--      <h2 class="box-title">Add New Book</h2>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="flex flex-col gap-3.5">
-    @for (item of recentlyBooks().slice(0, 5); track item.id) {
+    @for (item of recentlyBooks().slice(0, 6); track item.id) {
       <app-recently-added-books-item
         [bookName]="item.bookName"
         [author]="item.author"
