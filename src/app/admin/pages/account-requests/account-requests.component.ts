@@ -9,8 +9,9 @@ import {
   HlmDialogComponent,
   HlmDialogContentComponent,
   HlmDialogFooterComponent,
-  HlmDialogHeaderComponent, HlmDialogImports,
+  HlmDialogHeaderComponent,
 } from '@spartan-ng/ui-dialog-helm';
+
 
 @Component({
   selector: 'app-account-requests',
@@ -23,9 +24,6 @@ import {
     HlmDialogContentComponent,
     HlmDialogHeaderComponent,
     HlmDialogFooterComponent,
-    HlmDialogContentComponent,
-    HlmDialogContentComponent,
-    HlmDialogImports,
   ],
   templateUrl: './account-requests.component.html',
 })
