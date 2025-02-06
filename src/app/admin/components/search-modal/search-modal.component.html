@@ -1,0 +1,63 @@
+<hlm-dialog>
+  <button #dialogTrigger brnDialogTrigger class="w-full max-w-[300px]">
+    <div class="relative max-w-[300px] w-[50px] sm:w-fit md:w-full bg-[#F9FAFB] border-2 border-[#CBD5E1] rounded-lg p-3 flex items-center justify-between">
+      <div class="flex items-center gap-1.5 cursor-pointer w-[85%]">
+        <img src="/admin/search-normal.svg" alt="search"/>
+        <h4 class="w-full border-none outline-none bg-transparent text-slate-500 text-xs truncate">Search users, books, author, ...</h4>
+        <!--        <input type="text"-->
+        <!--               placeholder="Search users, books, author, ..."-->
+        <!--               class="cursor-pointer w-full border-none outline-none bg-transparent text-slate-500 text-sm">-->
+      </div>
+      <button class="hidden sm:block absolute right-[0.3rem] top-[50%] -translate-y-[50%]">
+        <kbd class="pointer-events-none hidden h-6 select-none items-center gap-1 rounded border bg-ghostWhiteColor px-1.5 font-mono text-sm font-medium opacity-100 sm:flex">
+          <span class="text-xs">⌘</span>
+          K
+        </kbd>
+      </button>
+    </div>
+  </button>
+
+  <hlm-dialog-content
+    class="block w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
+    <hlm-dialog-header>
+
+    </hlm-dialog-header>
+    <div class="">
+      <div class="flex items-center justify-between gap-2 w-full border-b border-slate-300 pb-3.5">
+        <img src="/admin/search-normal.svg" alt="search" />
+        <input type="text" placeholder="Type a command or search..." class="w-full border-none outline-none text-xs">
+      </div>
+      <div class="mt-5">
+        <h4 class="text-xs text-slate-500 mb-1.5">Links</h4>
+        <div>
+          <a routerLink="/admin/home" class="mb-3 py-3 px-2 flex items-center gap-3 rounded-md hover:bg-ghostWhiteColor transition-all">
+            <img src="/admin/home-icon.svg" alt="" />
+            <h3 class="text-sm font-medium text-slate-500">Home</h3>
+          </a>
+          <a routerLink="/admin/all-user" class="mb-3 py-3 px-2 flex items-center gap-3 rounded-md hover:bg-ghostWhiteColor transition-all">
+            <img src="/admin/all-users-icon.svg" alt="" />
+            <h3 class="text-sm font-medium text-slate-500">All Users</h3>
+          </a>
+          <a routerLink="/admin/all-books" class="mb-3 py-3 px-2 flex items-center gap-3 rounded-md hover:bg-ghostWhiteColor transition-all">
+            <img src="/admin/all-books-icon.svg" alt="" />
+            <h3 class="text-sm font-medium text-slate-500">All Books</h3>
+          </a>
+          <a routerLink="/admin/borrow-requests" class="mb-3 py-3 px-2 flex items-center gap-3 rounded-md hover:bg-ghostWhiteColor transition-all">
+            <img src="/admin/borrow-req-icon.svg" alt="" />
+            <h3 class="text-sm font-medium text-slate-500">Borrow Requests</h3>
+          </a>
+          <a routerLink="/admin/account-requests" class="mb-3 py-3 px-2 flex items-center gap-3 rounded-md hover:bg-ghostWhiteColor transition-all">
+            <img src="/admin/acc-req-icon.svg" alt="" />
+            <h3 class="text-sm font-medium text-slate-500">Account Requests </h3>
+          </a>
+        </div>
+
+        <p class="mt-1 text-base text-[#64748B] text-transparent h-0">Approve the student’s account request and grant access. A confirmation email will be sent upon approval.</p>
+      </div>
+    </div>
+    <hlm-dialog-footer>
+
+    </hlm-dialog-footer>
+  </hlm-dialog-content>
+</hlm-dialog>
+

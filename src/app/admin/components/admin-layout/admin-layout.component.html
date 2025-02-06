@@ -1,24 +1,22 @@
 <main>
   <app-sidebar/>
-  <div class="ml-0 xl:ml-[265px] min-h-screen bg-ghostWhiteColor rounded-bl-3xl rounded-tl-3xl border-2 border-[#EDF1F1]">
+  <div
+    class="ml-0 xl:ml-[265px] min-h-screen bg-ghostWhiteColor rounded-bl-3xl rounded-tl-3xl border-2 border-[#EDF1F1]">
     <div class="py-6 sm:container">
       <div class="px-4 sm:px-0">
-        <div class="flex items-center justify-between mb-10">
+        <div class="flex items-start xs:items-center flex-col-reverse gap-y-4 xs:flex-row justify-between mb-10">
           <div>
-            <h2 class="text-2xl font-semibold text-primaryDarkColor3 tracking-wide">Welcome, Abdulrahman</h2>
-            <p class="mt-2 text-base text-slate-500 font-normal">Monitor all of your projects and tasks here</p>
+            <h2 class="text-sm sm:text-2xl font-semibold text-primaryDarkColor3 tracking-wide">Welcome, Abdulrahman</h2>
+            <p class="mt-2 text-xs sm:text-base text-slate-500 font-normal">Monitor all of your projects and tasks here</p>
           </div>
-          <div class="max-w-[400px] w-[50px] sm:w-fit md:w-full bg-[#F9FAFB] border-2 border-[#CBD5E1] rounded-lg p-3">
-            <div class="flex items-center gap-3">
-              <img src="/admin/search-normal.svg" alt="search"/>
-              <input type="text"
-                     placeholder="Search users, books by title, author, or genre."
-                     class="w-full border-none outline-none bg-transparent text-slate-500 text-base">
+          <div class="flex flex-row gap-3">
+            <app-search-modal/>
+            <div class="bg-[#F9FAFB] border-2 border-[#CBD5E1] flex items-center justify-center rounded-lg p-3 h-[47px]">
+              <app-sidebar-sheet/>
             </div>
           </div>
         </div>
-
-        <ng-content />
+        <ng-content/>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'signin',
+    path: '',
     loadComponent: () =>
       import('./pages/signin/signin.component').then((mod) => mod.SigninComponent)
   },
@@ -10,11 +10,6 @@ export const routes: Routes = [
     path: 'signup',
     loadComponent: () =>
       import('./pages/signup/signup.component').then((mod) => mod.SignupComponent)
-  },
-  {
-    path: '',
-    loadComponent: () =>
-      import('./pages/home/home.component').then((mod) => mod.HomeComponent)
   },
   {
     path: 'home',

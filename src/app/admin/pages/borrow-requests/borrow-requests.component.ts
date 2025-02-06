@@ -20,4 +20,15 @@ export class BorrowRequestsComponent {
 
   protected profilePicService = inject(ProfilePicService);
 
+  isAscending: boolean = true;
+
+  toggleSort() {
+    this.isAscending = !this.isAscending;
+    this.borrowedRequestsBooks.sort((a, b) =>
+      this.isAscending
+        ? a.borrowedDate.localeCompare(b.borrowedDate)
+        : b.borrowedDate.localeCompare(a.borrowedDate)
+    );
+  }
+
 }

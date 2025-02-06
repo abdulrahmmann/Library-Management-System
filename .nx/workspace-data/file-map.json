@@ -4,6 +4,24 @@
   "pathMappings": {
     "@spartan-ng/ui-button-helm": [
       ".\\libs/ui/ui-button-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-select-helm": [
+      ".\\libs/ui/ui-select-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-icon-helm": [
+      ".\\libs/ui/ui-icon-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-formfield-helm": [
+      ".\\libs/ui/ui-formfield-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-scrollarea-helm": [
+      ".\\libs/ui/ui-scrollarea-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-sonner-helm": [
+      ".\\libs/ui/ui-sonner-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-dialog-helm": [
+      ".\\libs/ui/ui-dialog-helm/src/index.ts"
     ]
   },
   "nxJsonPlugins": [],
@@ -43,12 +61,144 @@
           "hash": "3089158842223537119"
         },
         {
+          "file": "libs/ui/ui-dialog-helm/src/index.ts",
+          "hash": "933315377037635710"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-close.directive.ts",
+          "hash": "4396345621562965426"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-content.component.ts",
+          "hash": "17774789820095859924"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-description.directive.ts",
+          "hash": "13958199224900080482"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-footer.component.ts",
+          "hash": "9580954145658853784"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-header.component.ts",
+          "hash": "18295140268813422724"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-overlay.directive.ts",
+          "hash": "18220763884815121541"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog-title.directive.ts",
+          "hash": "5930239430568862540"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog.component.ts",
+          "hash": "11534742675152075045"
+        },
+        {
+          "file": "libs/ui/ui-dialog-helm/src/lib/hlm-dialog.service.ts",
+          "hash": "13982045095406886092"
+        },
+        {
+          "file": "libs/ui/ui-formfield-helm/src/index.ts",
+          "hash": "1379682831294187538"
+        },
+        {
+          "file": "libs/ui/ui-formfield-helm/src/lib/form-field.spec.ts",
+          "hash": "9247239904589969713"
+        },
+        {
+          "file": "libs/ui/ui-formfield-helm/src/lib/hlm-error.directive.ts",
+          "hash": "8559813530759281347"
+        },
+        {
+          "file": "libs/ui/ui-formfield-helm/src/lib/hlm-form-field.component.ts",
+          "hash": "10263304905217156553"
+        },
+        {
+          "file": "libs/ui/ui-formfield-helm/src/lib/hlm-hint.directive.ts",
+          "hash": "6215421755390582281"
+        },
+        {
+          "file": "libs/ui/ui-icon-helm/src/index.ts",
+          "hash": "13072002477516072914"
+        },
+        {
+          "file": "libs/ui/ui-icon-helm/src/lib/hlm-icon.directive.spec.ts",
+          "hash": "9511563528933246212"
+        },
+        {
+          "file": "libs/ui/ui-icon-helm/src/lib/hlm-icon.directive.ts",
+          "hash": "1190767095705292823"
+        },
+        {
+          "file": "libs/ui/ui-icon-helm/src/lib/hlm-icon.token.ts",
+          "hash": "1780499468245078594"
+        },
+        {
+          "file": "libs/ui/ui-scrollarea-helm/src/index.ts",
+          "hash": "10381852457681001058"
+        },
+        {
+          "file": "libs/ui/ui-scrollarea-helm/src/lib/hlm-scroll-area.directive.ts",
+          "hash": "2925042699299357654"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/index.ts",
+          "hash": "14018309011524926443"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-content.directive.ts",
+          "hash": "13777679391543875655"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-group.directive.ts",
+          "hash": "10104144719712809790"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-label.directive.ts",
+          "hash": "2154633510682930564"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-option.component.ts",
+          "hash": "4432146121150387080"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-scroll-down.component.ts",
+          "hash": "13516777239966434237"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-scroll-up.component.ts",
+          "hash": "3653117012718161254"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-trigger.component.ts",
+          "hash": "7405980901353172555"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select-value.directive.ts",
+          "hash": "13603685003406549535"
+        },
+        {
+          "file": "libs/ui/ui-select-helm/src/lib/hlm-select.directive.ts",
+          "hash": "13558601816034201677"
+        },
+        {
+          "file": "libs/ui/ui-sonner-helm/src/index.ts",
+          "hash": "12741011570336314701"
+        },
+        {
+          "file": "libs/ui/ui-sonner-helm/src/lib/hlm-toaster.component.ts",
+          "hash": "6529122403533454000"
+        },
+        {
           "file": "package-lock.json",
-          "hash": "17000175277216041366"
+          "hash": "14815626482685793895"
         },
         {
           "file": "package.json",
-          "hash": "15886026740673779207",
+          "hash": "4558456889799997047",
           "deps": [
             "npm:@angular-devkit/build-angular",
             "npm:@angular/cli",
@@ -76,13 +226,90 @@
             "npm:@angular/platform-browser",
             "npm:@angular/platform-browser-dynamic",
             "npm:@angular/router",
+            "npm:@ng-icons/core",
+            "npm:@ng-icons/lucide",
             "npm:@spartan-ng/brain",
+            "npm:@spartan-ng/ui-core",
             "npm:class-variance-authority",
             "npm:clsx",
+            "npm:ngx-scrollbar",
+            "npm:ngx-sonner",
             "npm:rxjs",
             "npm:tslib",
             "npm:zone.js"
           ]
+        },
+        {
+          "file": "public/admin/acc-req-icon.svg",
+          "hash": "3288369035300817562"
+        },
+        {
+          "file": "public/admin/all-books-icon.svg",
+          "hash": "4079825740988707471"
+        },
+        {
+          "file": "public/admin/all-users-icon.svg",
+          "hash": "9606657849688016001"
+        },
+        {
+          "file": "public/admin/borrow-req-icon.svg",
+          "hash": "13335691808381972677"
+        },
+        {
+          "file": "public/admin/calender-icon.svg",
+          "hash": "18422094989987253775"
+        },
+        {
+          "file": "public/admin/chevron-green.svg",
+          "hash": "5022457430974371522"
+        },
+        {
+          "file": "public/admin/chevron-red.svg",
+          "hash": "11388551056447666525"
+        },
+        {
+          "file": "public/admin/empty-acc-req.png",
+          "hash": "3572617140624421930"
+        },
+        {
+          "file": "public/admin/empty-book-req.png",
+          "hash": "16743581956392862954"
+        },
+        {
+          "file": "public/admin/eye.svg",
+          "hash": "16317608863327097454"
+        },
+        {
+          "file": "public/admin/home-icon.svg",
+          "hash": "3713290006013032475"
+        },
+        {
+          "file": "public/admin/logo-admin.svg",
+          "hash": "8367915693852540792"
+        },
+        {
+          "file": "public/admin/logout-red.svg",
+          "hash": "10369084933610876211"
+        },
+        {
+          "file": "public/admin/plus-icon.svg",
+          "hash": "4729727480463854415"
+        },
+        {
+          "file": "public/admin/search-normal.svg",
+          "hash": "3871420995821279088"
+        },
+        {
+          "file": "public/approve.svg",
+          "hash": "13556627476552329996"
+        },
+        {
+          "file": "public/arrow-left.svg",
+          "hash": "10211765425508060063"
+        },
+        {
+          "file": "public/arrow-swap.svg",
+          "hash": "10014424743231449202"
         },
         {
           "file": "public/background-img.png",
@@ -91,6 +318,22 @@
         {
           "file": "public/bg-gradient.png",
           "hash": "12687216917176245099"
+        },
+        {
+          "file": "public/book-all-con.png",
+          "hash": "2426445953918933906"
+        },
+        {
+          "file": "public/book-all-con2.png",
+          "hash": "5502405668208147331"
+        },
+        {
+          "file": "public/book-all-con3.png",
+          "hash": "13919291425238929848"
+        },
+        {
+          "file": "public/book-con1.png",
+          "hash": "2426445953918933906"
         },
         {
           "file": "public/book-container-black.png",
@@ -115,6 +358,10 @@
         {
           "file": "public/book-container-yellow.png",
           "hash": "12721871669678877152"
+        },
+        {
+          "file": "public/book-cover.svg",
+          "hash": "13192527955878505962"
         },
         {
           "file": "public/book-icon.svg",
@@ -157,8 +404,36 @@
           "hash": "2336928433683087485"
         },
         {
+          "file": "public/close-circle.svg",
+          "hash": "12197626824308277533"
+        },
+        {
+          "file": "public/deny-circle.svg",
+          "hash": "13328565103114779510"
+        },
+        {
+          "file": "public/deny.png",
+          "hash": "10807319896329273947"
+        },
+        {
+          "file": "public/deny.svg",
+          "hash": "8423346943383582109"
+        },
+        {
           "file": "public/edit-user-profile.svg",
           "hash": "306262301777810626"
+        },
+        {
+          "file": "public/edit-white.svg",
+          "hash": "14481929407226792991"
+        },
+        {
+          "file": "public/edit.svg",
+          "hash": "5815490429002680175"
+        },
+        {
+          "file": "public/eye-blue.svg",
+          "hash": "12970455939551431960"
         },
         {
           "file": "public/eye-slash.svg",
@@ -171,6 +446,10 @@
         {
           "file": "public/favicon.ico",
           "hash": "3988961587069885523"
+        },
+        {
+          "file": "public/img-upload.svg",
+          "hash": "6908025827870325449"
         },
         {
           "file": "public/left-arrow.svg",
@@ -191,6 +470,18 @@
         {
           "file": "public/noise-overlay.png",
           "hash": "7242282924167264521"
+        },
+        {
+          "file": "public/plus-white.svg",
+          "hash": "9311061761679209554"
+        },
+        {
+          "file": "public/reading-book.svg",
+          "hash": "2809511802936439171"
+        },
+        {
+          "file": "public/receipt.svg",
+          "hash": "2522618109745611215"
         },
         {
           "file": "public/right-arrow.svg",
@@ -217,12 +508,248 @@
           "hash": "8228422202275653908"
         },
         {
+          "file": "public/trash.svg",
+          "hash": "13450449771660992932"
+        },
+        {
           "file": "public/user.png",
           "hash": "13215583534119655044"
         },
         {
+          "file": "public/user2.png",
+          "hash": "17937704650043524438"
+        },
+        {
+          "file": "public/user3.png",
+          "hash": "10952218969619499051"
+        },
+        {
+          "file": "public/user4.png",
+          "hash": "10311362877013432072"
+        },
+        {
           "file": "public/video-img.png",
           "hash": "12641709245901951261"
+        },
+        {
+          "file": "public/view.svg",
+          "hash": "16093305880987058327"
+        },
+        {
+          "file": "src/app/admin/components/account-requests/account-requests.component.html",
+          "hash": "12882613491853003057"
+        },
+        {
+          "file": "src/app/admin/components/account-requests/account-requests.component.ts",
+          "hash": "1250416989530417194"
+        },
+        {
+          "file": "src/app/admin/components/admin-layout/admin-layout.component.html",
+          "hash": "16019234991832372114"
+        },
+        {
+          "file": "src/app/admin/components/admin-layout/admin-layout.component.ts",
+          "hash": "4428988934042257018"
+        },
+        {
+          "file": "src/app/admin/components/borrow-request-item/borrow-request-item.component.html",
+          "hash": "1654382723235209996"
+        },
+        {
+          "file": "src/app/admin/components/borrow-request-item/borrow-request-item.component.ts",
+          "hash": "902727184864431043"
+        },
+        {
+          "file": "src/app/admin/components/borrow-requests/borrow-requests.component.html",
+          "hash": "16545134332873683460"
+        },
+        {
+          "file": "src/app/admin/components/borrow-requests/borrow-requests.component.ts",
+          "hash": "1032247154068847965"
+        },
+        {
+          "file": "src/app/admin/components/dashboard-stats-item/dashboard-stats-item.component.html",
+          "hash": "9262808573611500527"
+        },
+        {
+          "file": "src/app/admin/components/dashboard-stats-item/dashboard-stats-item.component.ts",
+          "hash": "929688462270897303"
+        },
+        {
+          "file": "src/app/admin/components/dashboard-stats/dashboard-stats.component.html",
+          "hash": "20386108640930990"
+        },
+        {
+          "file": "src/app/admin/components/dashboard-stats/dashboard-stats.component.ts",
+          "hash": "6015744547103831845"
+        },
+        {
+          "file": "src/app/admin/components/input-color-field/input-color-field.component.html",
+          "hash": "10959929390398253095"
+        },
+        {
+          "file": "src/app/admin/components/input-color-field/input-color-field.component.ts",
+          "hash": "14223878521452815199"
+        },
+        {
+          "file": "src/app/admin/components/input-field/input-field.component.html",
+          "hash": "8899214816052603980"
+        },
+        {
+          "file": "src/app/admin/components/input-field/input-field.component.ts",
+          "hash": "9712395239914923793"
+        },
+        {
+          "file": "src/app/admin/components/input-image-field/input-image-field.component.html",
+          "hash": "9345983851322583205"
+        },
+        {
+          "file": "src/app/admin/components/input-image-field/input-image-field.component.ts",
+          "hash": "16717907207418907890"
+        },
+        {
+          "file": "src/app/admin/components/input-video-field/input-video-field.component.html",
+          "hash": "8192930294593549687"
+        },
+        {
+          "file": "src/app/admin/components/input-video-field/input-video-field.component.ts",
+          "hash": "3667429504334626391"
+        },
+        {
+          "file": "src/app/admin/components/recently-added-books-item/recently-added-books-item.component.html",
+          "hash": "3325934416626142567"
+        },
+        {
+          "file": "src/app/admin/components/recently-added-books-item/recently-added-books-item.component.ts",
+          "hash": "3314646127355359245"
+        },
+        {
+          "file": "src/app/admin/components/recently-added-books/recently-added-books.component.html",
+          "hash": "7462334775159250636"
+        },
+        {
+          "file": "src/app/admin/components/recently-added-books/recently-added-books.component.ts",
+          "hash": "4382300775117945134"
+        },
+        {
+          "file": "src/app/admin/components/search-modal/search-modal.component.html",
+          "hash": "11842757007857660636"
+        },
+        {
+          "file": "src/app/admin/components/search-modal/search-modal.component.ts",
+          "hash": "17330972776132529888"
+        },
+        {
+          "file": "src/app/admin/models/account-requests.model.ts",
+          "hash": "9543580177569211381"
+        },
+        {
+          "file": "src/app/admin/models/all-books.model.ts",
+          "hash": "17568806613091859841"
+        },
+        {
+          "file": "src/app/admin/models/all-users.model.ts",
+          "hash": "5713506902979020555"
+        },
+        {
+          "file": "src/app/admin/models/barrow-requests.model.ts",
+          "hash": "12426397936884314748"
+        },
+        {
+          "file": "src/app/admin/models/borrow-requests.model.ts",
+          "hash": "6493955241778559013"
+        },
+        {
+          "file": "src/app/admin/models/recently-added-books.model.ts",
+          "hash": "9760098924933658290"
+        },
+        {
+          "file": "src/app/admin/pages/account-requests/account-requests.component.html",
+          "hash": "14100467233936097288"
+        },
+        {
+          "file": "src/app/admin/pages/account-requests/account-requests.component.ts",
+          "hash": "17761965527180816647"
+        },
+        {
+          "file": "src/app/admin/pages/all-books/all-books.component.html",
+          "hash": "6232906037447340645"
+        },
+        {
+          "file": "src/app/admin/pages/all-books/all-books.component.ts",
+          "hash": "13108023966406619067"
+        },
+        {
+          "file": "src/app/admin/pages/all-users/all-users.component.html",
+          "hash": "14453072959542622305"
+        },
+        {
+          "file": "src/app/admin/pages/all-users/all-users.component.ts",
+          "hash": "8222738697463854529"
+        },
+        {
+          "file": "src/app/admin/pages/borrow-requests/borrow-requests.component.html",
+          "hash": "17889158168636992225"
+        },
+        {
+          "file": "src/app/admin/pages/borrow-requests/borrow-requests.component.ts",
+          "hash": "1187700621547632322"
+        },
+        {
+          "file": "src/app/admin/pages/create-new-book/create-new-book.component.html",
+          "hash": "13627315796508612997"
+        },
+        {
+          "file": "src/app/admin/pages/create-new-book/create-new-book.component.ts",
+          "hash": "9496820052148087744"
+        },
+        {
+          "file": "src/app/admin/pages/edit-book-details/edit-book-details.component.html",
+          "hash": "13769088363902007253"
+        },
+        {
+          "file": "src/app/admin/pages/edit-book-details/edit-book-details.component.ts",
+          "hash": "14534354958975478204"
+        },
+        {
+          "file": "src/app/admin/pages/edit-book/edit-book.component.html",
+          "hash": "11882915944930511691"
+        },
+        {
+          "file": "src/app/admin/pages/edit-book/edit-book.component.ts",
+          "hash": "116507817588043112"
+        },
+        {
+          "file": "src/app/admin/pages/home-dashboard/home-dashboard.component.html",
+          "hash": "535286718394814165"
+        },
+        {
+          "file": "src/app/admin/pages/home-dashboard/home-dashboard.component.ts",
+          "hash": "8840273633533492177"
+        },
+        {
+          "file": "src/app/admin/services/account-requests.service.ts",
+          "hash": "5718667870147593078"
+        },
+        {
+          "file": "src/app/admin/services/all-books.service.ts",
+          "hash": "14724856651482373340"
+        },
+        {
+          "file": "src/app/admin/services/all-users.service.ts",
+          "hash": "10406291375652981765"
+        },
+        {
+          "file": "src/app/admin/services/borrow-requests.service.ts",
+          "hash": "3863867526724561355"
+        },
+        {
+          "file": "src/app/admin/services/profile-pic.service.ts",
+          "hash": "10155113513787205242"
+        },
+        {
+          "file": "src/app/admin/services/recently-added-books.service.ts",
+          "hash": "3136391197892879545"
         },
         {
           "file": "src/app/app.component.css",
@@ -242,11 +769,7 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "11524818327689885222"
-        },
-        {
-          "file": "src/app/components/auth-layout/auth-layout.component.css",
-          "hash": "3244421341483603138"
+          "hash": "2021697888922055540"
         },
         {
           "file": "src/app/components/auth-layout/auth-layout.component.html",
@@ -254,35 +777,31 @@
         },
         {
           "file": "src/app/components/auth-layout/auth-layout.component.ts",
-          "hash": "6246915494154217612"
+          "hash": "11117946216069672760"
         },
         {
-          "file": "src/app/components/book-item/book-item.component.css",
-          "hash": "3244421341483603138"
+          "file": "src/app/components/book-cover/book-cover.component.html",
+          "hash": "12177611616634303182"
+        },
+        {
+          "file": "src/app/components/book-cover/book-cover.component.ts",
+          "hash": "1966581493610645128"
         },
         {
           "file": "src/app/components/book-item/book-item.component.html",
-          "hash": "7644226593429145438"
+          "hash": "14405527473201930480"
         },
         {
           "file": "src/app/components/book-item/book-item.component.ts",
-          "hash": "10409581321376236504"
-        },
-        {
-          "file": "src/app/components/header/header.component.css",
-          "hash": "3244421341483603138"
+          "hash": "11859261515262734098"
         },
         {
           "file": "src/app/components/header/header.component.html",
-          "hash": "3293173641777091288"
+          "hash": "14508481323864556255"
         },
         {
           "file": "src/app/components/header/header.component.ts",
-          "hash": "7644190622134676410"
-        },
-        {
-          "file": "src/app/components/home-banner/home-banner.component.css",
-          "hash": "3244421341483603138"
+          "hash": "8863260603579635430"
         },
         {
           "file": "src/app/components/home-banner/home-banner.component.html",
@@ -290,11 +809,7 @@
         },
         {
           "file": "src/app/components/home-banner/home-banner.component.ts",
-          "hash": "5773225561266784417"
-        },
-        {
-          "file": "src/app/components/latest-bokks/latest-bokks.component.css",
-          "hash": "3244421341483603138"
+          "hash": "2968939874397336225"
         },
         {
           "file": "src/app/components/latest-bokks/latest-bokks.component.html",
@@ -302,11 +817,7 @@
         },
         {
           "file": "src/app/components/latest-bokks/latest-bokks.component.ts",
-          "hash": "11572157996857377151"
-        },
-        {
-          "file": "src/app/components/main-layout/main-layout.component.css",
-          "hash": "3244421341483603138"
+          "hash": "1735713374108368091"
         },
         {
           "file": "src/app/components/main-layout/main-layout.component.html",
@@ -314,11 +825,7 @@
         },
         {
           "file": "src/app/components/main-layout/main-layout.component.ts",
-          "hash": "8791243904678107965"
-        },
-        {
-          "file": "src/app/components/new-released-books/new-released-books.component.css",
-          "hash": "3244421341483603138"
+          "hash": "3012589910097356271"
         },
         {
           "file": "src/app/components/new-released-books/new-released-books.component.html",
@@ -326,11 +833,7 @@
         },
         {
           "file": "src/app/components/new-released-books/new-released-books.component.ts",
-          "hash": "713546716294662912"
-        },
-        {
-          "file": "src/app/components/popular-books/popular-books.component.css",
-          "hash": "3244421341483603138"
+          "hash": "17157901796079722255"
         },
         {
           "file": "src/app/components/popular-books/popular-books.component.html",
@@ -338,11 +841,7 @@
         },
         {
           "file": "src/app/components/popular-books/popular-books.component.ts",
-          "hash": "9501459393633714344"
-        },
-        {
-          "file": "src/app/components/search-empty/search-empty.component.css",
-          "hash": "3244421341483603138"
+          "hash": "9980856328532965531"
         },
         {
           "file": "src/app/components/search-empty/search-empty.component.html",
@@ -350,19 +849,23 @@
         },
         {
           "file": "src/app/components/search-empty/search-empty.component.ts",
-          "hash": "5759675810544722000"
-        },
-        {
-          "file": "src/app/components/search-results/search-results.component.css",
-          "hash": "3244421341483603138"
+          "hash": "15356233291644487098"
         },
         {
           "file": "src/app/components/search-results/search-results.component.html",
-          "hash": "10745065280247206587"
+          "hash": "9083659539100943336"
         },
         {
           "file": "src/app/components/search-results/search-results.component.ts",
-          "hash": "14339339845280960390"
+          "hash": "14455357276595797875"
+        },
+        {
+          "file": "src/app/components/sidebar/sidebar.component.html",
+          "hash": "8350306648717787837"
+        },
+        {
+          "file": "src/app/components/sidebar/sidebar.component.ts",
+          "hash": "246812104076172919"
         },
         {
           "file": "src/app/components/user-dropdown/user-dropdown.component.css",
@@ -381,20 +884,12 @@
           "hash": "3351935635018047059"
         },
         {
-          "file": "src/app/pages/book-details/book-details.component.css",
-          "hash": "3244421341483603138"
-        },
-        {
           "file": "src/app/pages/book-details/book-details.component.html",
           "hash": "13009726562919618967"
         },
         {
           "file": "src/app/pages/book-details/book-details.component.ts",
-          "hash": "11085805815407465479"
-        },
-        {
-          "file": "src/app/pages/home/home.component.css",
-          "hash": "15764842254792776609"
+          "hash": "15391556023917981164"
         },
         {
           "file": "src/app/pages/home/home.component.html",
@@ -402,11 +897,15 @@
         },
         {
           "file": "src/app/pages/home/home.component.ts",
-          "hash": "16221858645843657325"
+          "hash": "9228973418795382119"
         },
         {
-          "file": "src/app/pages/search-page/search-page.component.css",
-          "hash": "3244421341483603138"
+          "file": "src/app/pages/not-found/not-found.component.html",
+          "hash": "12037152707607826347"
+        },
+        {
+          "file": "src/app/pages/not-found/not-found.component.ts",
+          "hash": "1881845512024064808"
         },
         {
           "file": "src/app/pages/search-page/search-page.component.html",
@@ -414,31 +913,23 @@
         },
         {
           "file": "src/app/pages/search-page/search-page.component.ts",
-          "hash": "10586601565376829536"
-        },
-        {
-          "file": "src/app/pages/signin/signin.component.css",
-          "hash": "3244421341483603138"
+          "hash": "802895363884895843"
         },
         {
           "file": "src/app/pages/signin/signin.component.html",
-          "hash": "8037197129016563287"
+          "hash": "9218206293333822283"
         },
         {
           "file": "src/app/pages/signin/signin.component.ts",
-          "hash": "14419053839408215702"
-        },
-        {
-          "file": "src/app/pages/signup/signup.component.css",
-          "hash": "3244421341483603138"
+          "hash": "3906677306710401291"
         },
         {
           "file": "src/app/pages/signup/signup.component.html",
-          "hash": "5246409411886241628"
+          "hash": "10824015675448903894"
         },
         {
           "file": "src/app/pages/signup/signup.component.ts",
-          "hash": "9681874895686482860"
+          "hash": "5457821883373445541"
         },
         {
           "file": "src/index.html",
@@ -450,11 +941,11 @@
         },
         {
           "file": "src/styles.css",
-          "hash": "17122173065553405240"
+          "hash": "15728795492374266417"
         },
         {
           "file": "tailwind.config.js",
-          "hash": "1855119009170406612"
+          "hash": "1016351077202288413"
         },
         {
           "file": "tsconfig.app.json",
@@ -462,7 +953,7 @@
         },
         {
           "file": "tsconfig.json",
-          "hash": "7100641745389417367"
+          "hash": "18210996543125344270"
         },
         {
           "file": "tsconfig.spec.json",

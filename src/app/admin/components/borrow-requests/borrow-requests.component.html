@@ -14,11 +14,10 @@
       @for (item of borrowRequestItems.slice(0,3); track item.id) {
         <app-borrow-request-item
           [bookName]="item.bookName"
-          [author]="item.author"
-          [bookPoster]="item.poster"
-          [borrowedDate]="item.dateBorrowed"
-          [borrowedUserImg]="item.userBorrowedImg"
-          [borrowedUserName]="item.userBorrowedName"
+          [author]="item.userName"
+          [bookPoster]="item.bookImage"
+          [borrowedDate]="item.borrowedDate"
+          [borrowedUserName]="item.userName"
           [genre]="item.genre">
         </app-borrow-request-item>
       }

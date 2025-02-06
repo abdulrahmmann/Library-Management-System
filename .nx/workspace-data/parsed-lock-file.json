@@ -121,9 +121,9 @@
       "type": "npm",
       "name": "npm:@angular/cdk",
       "data": {
-        "version": "19.1.0",
+        "version": "19.1.1",
         "packageName": "@angular/cdk",
-        "hash": "sha512-h7VSaMA/vFHb7u1bwoHKl3L3mZLIcXNZw6v7Nei9ITfEo1PfSKbrYhleeqpNikzE+LxNDKJrbZtpAckSYHblmA=="
+        "hash": "sha512-MmfNB9iANuDN1TS+HL8uKqA3/7pdVeCRN+HdAcfqFrcqZmSUUSlYWy8PXqymmyeXxoSwt9p4I/6R0By03VoCMw=="
       }
     },
     "npm:@angular/cli": {
@@ -2457,6 +2457,24 @@
         "hash": "sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ=="
       }
     },
+    "npm:@ng-icons/core": {
+      "type": "npm",
+      "name": "npm:@ng-icons/core",
+      "data": {
+        "version": "29.10.0",
+        "packageName": "@ng-icons/core",
+        "hash": "sha512-PR6SO00yvFhwDhh37BWhtAgRfzxuXpJQBsAQ44Pg3gjc83fOAwOtMSXizYwtN0uUFIkAYZHZCEuV7Sb8eosK+w=="
+      }
+    },
+    "npm:@ng-icons/lucide": {
+      "type": "npm",
+      "name": "npm:@ng-icons/lucide",
+      "data": {
+        "version": "30.2.0",
+        "packageName": "@ng-icons/lucide",
+        "hash": "sha512-z8tqUMcgw2MXuJiUHRtdjs4LwUxrxV6xy3MsFBkK6LKCNen9v7FXfOjOPzFvR/HlOJ+ZmgJfxJ6cp5lhwvDM7Q=="
+      }
+    },
     "npm:@ngtools/webpack": {
       "type": "npm",
       "name": "npm:@ngtools/webpack",
@@ -4126,18 +4144,18 @@
       "type": "npm",
       "name": "npm:@spartan-ng/brain",
       "data": {
-        "version": "0.0.1-alpha.390",
+        "version": "0.0.1-alpha.391",
         "packageName": "@spartan-ng/brain",
-        "hash": "sha512-51BC3dfiktunFqJVSytpPvb7cgb5bqwCqHQFr7cRyv3oVTC3jR5b6V7DakhwewQBTXosJmDHn1F4ycdRKfGCBA=="
+        "hash": "sha512-81hlxlfFEehQ9ql8QLtdf+WuhSMBbwcOc4v5zbL+VZoxqZFO1n7A61t+u97TW1LV/V9fVS4RXWp2tTm8V4biRg=="
       }
     },
     "npm:@spartan-ng/cli": {
       "type": "npm",
       "name": "npm:@spartan-ng/cli",
       "data": {
-        "version": "0.0.1-alpha.390",
+        "version": "0.0.1-alpha.391",
         "packageName": "@spartan-ng/cli",
-        "hash": "sha512-C3G4RqnYaVaGTsQua1PPJaniLUNZj5zhBQ7mqflE0waoN6AZts7rp2cfK9IKfHmmKmpWNbXHMmqI6yRRUHbgXg=="
+        "hash": "sha512-CtD+P19BTVq/hLR+MkYCC1wPYYWuxhkjxagekv1gM9ApdzIUQXK3hh1JQ22jeoQmNOLO1vBEdnw2Fo2f1ogQjQ=="
       }
     },
     "npm:yallist@4.0.0": {
@@ -4165,6 +4183,15 @@
         "version": "3.1.1",
         "packageName": "yallist",
         "hash": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
+      }
+    },
+    "npm:@spartan-ng/ui-core": {
+      "type": "npm",
+      "name": "npm:@spartan-ng/ui-core",
+      "data": {
+        "version": "0.0.1-alpha.380",
+        "packageName": "@spartan-ng/ui-core",
+        "hash": "sha512-W5T2thWO4BhGGEhmo0Ie4wXYJYgoqKLCl81lh3MZA3zwmonigczI9Oj+vdd8D+5+PZUaLOPDTep79vPKWkPbsg=="
       }
     },
     "npm:@trysound/sax": {
@@ -8863,6 +8890,24 @@
         "version": "2.6.2",
         "packageName": "neo-async",
         "hash": "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw=="
+      }
+    },
+    "npm:ngx-scrollbar": {
+      "type": "npm",
+      "name": "npm:ngx-scrollbar",
+      "data": {
+        "version": "18.0.0",
+        "packageName": "ngx-scrollbar",
+        "hash": "sha512-+ykmY491x+nzXvnecJvZHvDz0YWuX1r7SYMxNG4RVHXm5Z68P/8kd/3ryLD6DXdNWmJawd4NGvqq2ZkUKb/g3A=="
+      }
+    },
+    "npm:ngx-sonner": {
+      "type": "npm",
+      "name": "npm:ngx-sonner",
+      "data": {
+        "version": "2.0.2",
+        "packageName": "ngx-sonner",
+        "hash": "sha512-7dcNMfNO1hmtoQzrtgh507AeTmgTyR3y//gWZlhhG/dlGxUUNnszeOiHXBcm7F89b6HKkqpBq9/RCL18Zrsc6A=="
       }
     },
     "npm:node-abort-controller": {
@@ -15129,6 +15174,31 @@
       "type": "static"
     },
     {
+      "source": "npm:@ng-icons/core",
+      "target": "npm:@angular/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-icons/core",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-icons/core",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-icons/core",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-icons/lucide",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
       "source": "npm:@ngtools/webpack",
       "target": "npm:@angular/compiler-cli",
       "type": "static"
@@ -16970,6 +17040,11 @@
     },
     {
       "source": "npm:@spartan-ng/cli",
+      "target": "npm:picocolors",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/cli",
       "target": "npm:semver@7.5.4",
       "type": "static"
     },
@@ -16986,6 +17061,41 @@
     {
       "source": "npm:semver@7.5.4",
       "target": "npm:lru-cache@6.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:clsx",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:tailwind-merge",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:tailwindcss",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:tailwindcss-animate",
+      "type": "static"
+    },
+    {
+      "source": "npm:@spartan-ng/ui-core",
+      "target": "npm:tslib",
       "type": "static"
     },
     {
@@ -21771,6 +21881,46 @@
     {
       "source": "npm:iconv-lite@0.6.3",
       "target": "npm:safer-buffer",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-scrollbar",
+      "target": "npm:@angular/cdk",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-scrollbar",
+      "target": "npm:@angular/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-scrollbar",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-scrollbar",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-scrollbar",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-sonner",
+      "target": "npm:@angular/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-sonner",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:ngx-sonner",
+      "target": "npm:tslib",
       "type": "static"
     },
     {

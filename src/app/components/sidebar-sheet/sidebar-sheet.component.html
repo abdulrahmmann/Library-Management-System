@@ -1,9 +1,19 @@
-<aside class="fixed left-0 top-0 bottom-0 bg-white w-[265px] hidden xl:flex flex-col justify-between">
-  <nav class="p-2">
-    <div class="pb-0 px-2">
-      <img src="/admin/logo-admin.svg" alt="book wise admin logo" class="mx-auto"/>
-    </div>
-    <div class="border-t-[2px] border-dashed border-[#8C8E98] pt-4">
+<hlm-sheet side="left" class="block xl:hidden mt-2">
+  <button id="edit-profile" variant="outline" brnSheetTrigger>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+      <line x1="4" x2="20" y1="12" y2="12"/>
+      <line x1="4" x2="20" y1="6" y2="6"/>
+      <line x1="4" x2="20" y1="18" y2="18"/>
+    </svg>
+<!--    Open Sidebar-->
+  </button>
+  <hlm-sheet-content *brnSheetContent="let ctx">
+    <hlm-sheet-header></hlm-sheet-header>
+    <div class="py-4 grid ">
+      <div class="pb-0 px-2">
+        <img src="/admin/logo-admin.svg" alt="book wise admin logo" class=""/>
+      </div>
       <ul class="flex flex-col items-start gap-2.5">
         @for (item of sidebarItems; track item.id) {
           <li
@@ -34,21 +44,7 @@
         }
       </ul>
     </div>
-  </nav>
-  <div class="w-full p-2 mb-4 bg-white border-2 border-[#EDF1F1] rounded-[60px] mx-auto"
-       style="width: calc(100% - 16px);">
-    <div class="flex items-center justify-between gap-1">
-      <div class="relative size-11">
-        <img src="/user.png" alt="user img" class="w-full h-full rounded-full"/>
-        <span class="size-4 rounded-full bg-[#2CC974] absolute bottom-0 right-0"></span>
-      </div>
-      <div class="max-w-[150px]">
-        <h3 class="text-sm text-primaryDarkColor3 font-medium mb-1 truncate">Abdulrahman Mustafa</h3>
-        <p class="text-secondaryGreyColor text-sm truncate">abdulra7man#gmail.com</p>
-      </div>
-      <a routerLink="/">
-        <img src="/admin/logout-red.svg" alt="logout"/>
-      </a>
-    </div>
-  </div>
-</aside>
+
+    <hlm-sheet-footer></hlm-sheet-footer>
+  </hlm-sheet-content>
+</hlm-sheet>

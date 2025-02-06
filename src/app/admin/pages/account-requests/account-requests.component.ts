@@ -8,10 +8,8 @@ import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-n
 import {
   HlmDialogComponent,
   HlmDialogContentComponent,
-  HlmDialogDescriptionDirective,
   HlmDialogFooterComponent,
   HlmDialogHeaderComponent, HlmDialogImports,
-  HlmDialogTitleDirective,
 } from '@spartan-ng/ui-dialog-helm';
 
 @Component({
@@ -25,8 +23,6 @@ import {
     HlmDialogContentComponent,
     HlmDialogHeaderComponent,
     HlmDialogFooterComponent,
-    HlmDialogTitleDirective,
-    HlmDialogDescriptionDirective,
     HlmDialogContentComponent,
     HlmDialogContentComponent,
     HlmDialogImports,
@@ -39,4 +35,15 @@ export class AccountRequestsComponent {
   protected allAccounts = this._allAccountsRequestsService.getAllAccountsRequests;
 
   protected profilePicService = inject(ProfilePicService);
+
+  isAscending: boolean = true;
+
+  toggleSort() {
+    this.isAscending = !this.isAscending;
+    this.allAccounts.sort((a, b) =>
+      this.isAscending
+        ? a.dateJoined.localeCompare(b.dateJoined)
+        : b.dateJoined.localeCompare(a.dateJoined)
+    );
+  }
 }

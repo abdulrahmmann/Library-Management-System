@@ -1,14 +1,17 @@
 <app-admin-layout>
   <div class="bg-white rounded-xl p-5">
 
-    <div class="flex items-center justify-between mb-5">
+    <div class="flex items-center justify-between mb-5 flex-wrap">
       <h2 class="box-title">All Books</h2>
       <div class="flex items-center gap-5">
-        <button
-          class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
-          <h3 class="font-medium text-primaryDarkColor4 text-sm">A-Z</h3>
-          <img src="/arrow-swap.svg" alt=""/>
+        <button (click)="toggleSort()"
+                class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+          <h3 class="font-medium text-primaryDarkColor4 text-sm">
+            {{ isAscending ? 'A-Z' : 'Z-A' }}
+          </h3>
+          <img ngSrc="/arrow-swap.svg" alt="" height="16" width="16"/>
         </button>
+
         <a routerLink="create-new-book"
            class="px-4 py-2 bg-[#25388C] hover:bg-[#25388C]/90 rounded-lg flex items-center gap-2">
           <img src="/plus-white.svg" alt=""/>
@@ -61,8 +64,8 @@
                           <button id="" brnDialogTrigger>
                             <img src="/trash.svg" alt="" class="cursor-pointer"/>
                           </button>
-                          <hlm-dialog-content style="width: 500px !important; padding: 16px"
-                                              class="w-[500px] justify-center" *brnDialogContent="let ctx">
+                          <hlm-dialog-content
+                                              class="w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
                             <hlm-dialog-header>
 
                             </hlm-dialog-header>
@@ -79,7 +82,7 @@
                                 </p>
                               </div>
                             </div>
-                            <hlm-dialog-footer>
+                            <hlm-dialog-footer class="gap-y-3">
                               <button type="submit"
                                       class="w-full text-base font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#F46F70] hover:bg-[#F46F70]/85">
                                 Remove Book
@@ -98,28 +101,28 @@
                 }
               </tbody>
             </table>
-            <div class="flex items-center justify-end gap-3 py-6">
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
-                src="/left-arrow.svg" alt="previous arrow">
-              </button>
-              <button
-                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
-                1
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
-                ...
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
-                7
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
-                src="/right-arrow.svg" alt="next arrow">
-              </button>
-            </div>
+<!--            <div class="flex items-center justify-end gap-3 py-6">-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
+<!--                src="/left-arrow.svg" alt="previous arrow">-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">-->
+<!--                1-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
+<!--                ...-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
+<!--                7-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
+<!--                src="/right-arrow.svg" alt="next arrow">-->
+<!--              </button>-->
+<!--            </div>-->
           </div>
         </div>
       </div>

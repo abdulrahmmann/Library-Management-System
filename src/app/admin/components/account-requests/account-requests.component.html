@@ -16,18 +16,18 @@
       @for (account of getAccountRequest.slice(0, 6); track account.id) {
         <article class="bg-ghostWhiteColor rounded-lg">
           <div class="px-3 py-3.5">
-            @if (account.accountImage) {
+            @if (account.profilePic) {
               <img
-                [src]="account.accountImage"
+                [src]="account.profilePic"
                 alt="account image"
                 class="size-12 rounded-full mx-auto"/>
             } @else {
               <div class="size-12 rounded-full mx-auto flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
-                   [class]="profilePicService.getStyles(account.accountName)">
-                {{ account.accountName.slice(0, 2) }}</div>
+                   [class]="profilePicService.getStyles(account.name)">
+                {{ account.name.slice(0, 2) }}</div>
             }
-            <h3 class="text-primaryDarkColor3 font-medium text-base mt-3 text-center">{{ account.accountName }}</h3>
-            <p class="text-xs text-secondaryGreyColor text-center">{{ account.accountEmail }}</p>
+            <h3 class="text-primaryDarkColor3 font-medium text-base mt-3 text-center">{{ account.name }}</h3>
+            <p class="text-xs text-secondaryGreyColor text-center truncate">{{ account.email }}</p>
           </div>
         </article>
       }

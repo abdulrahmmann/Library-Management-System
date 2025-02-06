@@ -6,13 +6,10 @@ import {ProfilePicService} from '../../services/profile-pic.service';
 
 import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-ng/brain/dialog';
 import {
-  HlmDialogCloseDirective,
   HlmDialogComponent,
   HlmDialogContentComponent,
-  HlmDialogDescriptionDirective,
   HlmDialogFooterComponent,
   HlmDialogHeaderComponent,
-  HlmDialogTitleDirective,
 } from '@spartan-ng/ui-dialog-helm';
 
 @Component({
@@ -26,10 +23,7 @@ import {
     HlmDialogContentComponent,
     HlmDialogHeaderComponent,
     HlmDialogFooterComponent,
-    HlmDialogTitleDirective,
-    HlmDialogDescriptionDirective,
     HlmDialogContentComponent,
-    HlmDialogCloseDirective,
     NgOptimizedImage,
   ],
   templateUrl: './all-users.component.html',
@@ -40,5 +34,35 @@ export class AllUsersComponent {
   protected allUsers = this._allUsersService.getAllUsers;
 
   protected profilePicService = inject(ProfilePicService);
+
+  isAscending: boolean = true;
+
+  toggleSort() {
+    this.isAscending = !this.isAscending;
+    this.allUsers.sort((a, b) =>
+      this.isAscending
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
+    );
+  }
+
+  protected usersPerPage = 6;
+  protected currentPage = 1;
+
+  get totalPages(): number {
+    return Math.ceil(this.allUsers.length / this.usersPerPage);
+  }
+
+  get paginatedUsers() {
+    const start = (this.currentPage - 1) * this.usersPerPage;
+    const end = start + this.usersPerPage;
+    return this.allUsers.slice(start, end);
+  }
+
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
+  }
 
 }

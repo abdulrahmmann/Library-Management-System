@@ -17,6 +17,7 @@ export class BorrowRequestsService {
       borrowedDate: "2025-01-15",
       returnDate: "2025-01-15",
       dueDate: "2025-02-15",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 2,
@@ -29,6 +30,7 @@ export class BorrowRequestsService {
       borrowedDate: "2025-01-01",
       returnDate: "2025-01-20",
       dueDate: "2025-01-15",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 3,
@@ -40,6 +42,8 @@ export class BorrowRequestsService {
       borrowedDate: "2024-12-10",
       returnDate: "2025-01-25",
       dueDate: "2025-01-10",
+      genre: "Strategic, Fantasy",
+      userImage: "/user3.png",
     },
     {
       id: 4,
@@ -51,6 +55,8 @@ export class BorrowRequestsService {
       borrowedDate: "2025-01-20",
       returnDate: "2025-01-15",
       dueDate: "2025-02-20",
+      genre: "Strategic, Fantasy",
+      userImage: "/user3.png",
     },
     {
       id: 5,
@@ -63,17 +69,20 @@ export class BorrowRequestsService {
       returnDate: "2025-01-05",
       dueDate: "2025-01-01",
       userImage: "/user3.png",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 6,
       bookName: "The Catcher in the Rye",
       bookImage: "/book-all-con3.png",
       userName: "Yara Gallagher",
+      userImage: "/user3.png",
       userEmail: "fiona.gallagher@example.com",
       borrowedStatus: "Late Return",
       borrowedDate: "2024-11-25",
       returnDate: "2025-01-15",
       dueDate: "2024-12-25",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 7,
@@ -86,17 +95,20 @@ export class BorrowRequestsService {
       returnDate: "2025-01-15",
       dueDate: "2025-02-10",
       userImage: "/user3.png",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 8,
       bookName: "Jayne Castle",
       bookImage: "/book-all-con2.png",
       userName: "Hannah Baker",
+      userImage: "/user3.png",
       userEmail: "hannah.baker@example.com",
       borrowedStatus: "Borrowed",
       borrowedDate: "2025-01-25",
       returnDate: "2025-01-15",
       dueDate: "2025-02-25",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 9,
@@ -109,17 +121,20 @@ export class BorrowRequestsService {
       borrowedDate: "2024-12-20",
       returnDate: "2025-01-05",
       dueDate: "2025-01-01",
+      genre: "Strategic, Fantasy"
     },
     {
       id: 10,
       bookName: "People in Glass Houses",
       bookImage: "/book-all-con3.png",
       userName: "Tomas Sparrow",
+      userImage: "/user3.png",
       userEmail: "jack.sparrow@example.com",
       borrowedStatus: "Late Return",
       borrowedDate: "2024-12-01",
       returnDate: "2025-01-10",
       dueDate: "2024-12-31",
+      genre: "Strategic, Fantasy"
     },
   ];
 

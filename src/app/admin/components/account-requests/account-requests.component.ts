@@ -15,7 +15,7 @@ import {ProfilePicService} from '../../services/profile-pic.service';
 export class AccountRequestsComponent {
   private _accountRequest = inject(AccountRequestsService);
 
-  getAccountRequest = this._accountRequest.getAccountRequests;
+  getAccountRequest = this._accountRequest.getAllAccountsRequests;
 
   protected profilePicService = inject(ProfilePicService);
 

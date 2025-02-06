@@ -5,19 +5,18 @@
       <h2 class="text-base font-semibold text-primaryDarkColor3">{{ bookName() }}</h2>
 
       <div class="my-1 flex flex-col xs:flex-row items-center gap-1 xs:gap-4">
-      <span class="text-sm text-[#64748B]">By {{ author() }}</span>
-      <ul class="flex items-center gap-1">
-        <span class="size-1 rounded-full bg-secondaryGreyColor"></span>
-        <li *ngFor="let g of genre()"
-        class="text-sm text-[#64748B]">
-          {{ g }},
-        </li>
-      </ul>
+      <span class="text-xs text-[#64748B]">By {{ author() }}</span>
+        <span class="text-xs text-[#64748B]">{{genre()}}</span>
       </div>
 
-      <div class="flex flex-col xs:flex-row items-center gap-1 xs:gap-3">
+      <div class="flex flex-col xs:flex-row items-center gap-1 xs:gap-3 mt-2">
         <div class="flex items-center gap-1">
-          <img [src]="borrowedUserImg()" alt="user img" class="w-5 h-5 rounded-full" />
+<!--          @if (!borrowedUserImg ?? '') {-->
+<!--            <div class="userImage">{{borrowedUserName().slice(0,2)}}</div>-->
+<!--          } @else {-->
+<!--            <img [src]="borrowedUserImg" alt="" class="" />-->
+<!--          }-->
+          <img src="/user3.png" alt="" class="size-5" />
           <h4 class="text-xs text-[#3A354E] font-medium">{{borrowedUserName()}}</h4>
         </div>
         <div class="flex items-center gap-1">

@@ -10,4 +10,5 @@ export interface BorrowRequestsModel {
   borrowedDate: string;
   returnDate: string;
   dueDate: string;
+  genre: string;
 }

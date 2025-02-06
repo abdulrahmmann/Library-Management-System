@@ -8,12 +8,12 @@ import {NgClass} from '@angular/common';
   selector: 'app-borrow-requests',
   imports: [
     RouterLink,
-    BorrowRequestItemComponent,
-    NgClass
+    NgClass,
+    BorrowRequestItemComponent
   ],
   templateUrl: './borrow-requests.component.html',
   styles: ``
 })
 export class BorrowRequestsComponent {
-  protected borrowRequestItems = inject(BorrowRequestsService).borrowedRequestsBooks;
+  protected borrowRequestItems = inject(BorrowRequestsService).getAllBorrowedRequests;
 }

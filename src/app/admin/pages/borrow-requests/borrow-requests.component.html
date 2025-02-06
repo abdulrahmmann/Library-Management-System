@@ -3,7 +3,7 @@
 
     <div class="flex items-center justify-between mb-5">
       <h2 class="box-title">Borrow Book Requests</h2>
-      <button
+      <button (click)="toggleSort()"
         class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
         <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
         <img src="/arrow-swap.svg" alt=""/>
@@ -75,28 +75,28 @@
                 }
               </tbody>
             </table>
-            <div class="flex items-center justify-end gap-3 py-6">
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
-                src="/left-arrow.svg" alt="previous arrow">
-              </button>
-              <button
-                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">
-                1
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
-                ...
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">
-                7
-              </button>
-              <button
-                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img
-                src="/right-arrow.svg" alt="next arrow">
-              </button>
-            </div>
+<!--            <div class="flex items-center justify-end gap-3 py-6">-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
+<!--                src="/left-arrow.svg" alt="previous arrow">-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">-->
+<!--                1-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
+<!--                ...-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
+<!--                7-->
+<!--              </button>-->
+<!--              <button-->
+<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
+<!--                src="/right-arrow.svg" alt="next arrow">-->
+<!--              </button>-->
+<!--            </div>-->
           </div>
         </div>
       </div>
