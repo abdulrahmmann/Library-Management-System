@@ -4,102 +4,78 @@
     <div class="flex items-center justify-between mb-5">
       <h2 class="box-title">Borrow Book Requests</h2>
       <button (click)="toggleSort()"
-        class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+              class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
         <h3 class="font-medium text-primaryDarkColor4 text-sm">Oldest to Recent</h3>
         <img src="/arrow-swap.svg" alt=""/>
       </button>
     </div>
 
-    <div>
-      <div class="flow-root">
-        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table class="min-w-[1050px] w-full">
-              <thead>
-              <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">User Requested</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Book</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Borrowed Status</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Borrowed date</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Return date</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Due Date</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4 capitalize">Receipt</th>
-              </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 bg-white w-full">
-                @for (book of borrowedRequestsBooks; track book.id) {
-                  <tr>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      <div class="flex items-center gap-2">
-                        <img alt="" class="h-12" [src]="book.bookImage">
-                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{book.bookName}}</h2>
-                      </div>
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      <div class="flex items-center gap-2">
-                        @if (book.userImage) {
-                          <img
-                            [src]="book.userImage"
-                            alt="account image"
-                            class="size-12 rounded-full"/>
-                        } @else {
-                          <div class="size-12 rounded-full flex items-center justify-center border-2 uppercase font-geist font-semibold text-xl"
-                               [class]="profilePicService.getStyles(book.userName)">
-                            {{ book.userName.slice(0, 2) }}</div>
-                        }
-                        <div>
-                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor3">{{book.userName}}</h2>
-                          <p class="text-sm text-secondaryGreyColor">{{book.userEmail}}</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      @if (book.borrowedStatus === "Borrowed") {
-                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#F9F5FF] text-[#6941C6] text-sm font-medium">Borrowed</div>
-                      } @else if (book.borrowedStatus === "Returned") {
-                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#F0F9FF] text-[#026AA2] text-sm font-medium">Returned</div>
-                      } @else {
-                        <div class="w-fit px-4 py-1 rounded-3xl text-center bg-[#FFF1F3] text-[#C01048] text-sm font-medium">Late Return</div>
-                      }
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.borrowedDate | date}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.returnDate | date}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{book.dueDate | date}}</td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      <button class="group hover:bg-[#25388C] transition-all flex items-center gap-2 px-3 py-2.5 bg-ghostWhiteColor rounded-lg">
-                        <img src="/receipt.svg" alt="" class="group-hover:filter group-hover:brightness-0 group-hover:invert" />
-                        <h2 class="text-sm text-[#25388C] group-hover:text-ghostWhiteColor font-semibold">Generate</h2>
-                      </button>
-                    </td>
-                  </tr>
+    <div class="card">
+      <p-table
+        [value]="borrowedRequestsBooks"
+        [paginator]="true"
+        [rows]="6"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[6, 12, 20]"
+      >
+        <ng-template #header>
+          <tr>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Book</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">User Requested</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Borrowed Status</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Borrowed Date</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Return Date</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Due Date</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Receipt</th>
+          </tr>
+        </ng-template>
+        <ng-template #body let-borReq>
+          <tr>
+            <td class="font-medium text-xs text-tableColor">
+              <div class="flex items-center gap-3">
+                <img [src]="borReq.bookImage" alt="" class="h-10"/>
+                <h2 class="text-sm font-semibold text-primaryDarkColor3">{{ borReq.bookName }}</h2>
+              </div>
+            </td>
+            <td class="text-xs text-tableColor">
+              <div class="flex items-center gap-2">
+                @if (borReq.userImage) {
+                  <img [src]="borReq.userImage" alt="user img" class="size-10 rounded-full object-contain"/>
+                } @else {
+                  <div [class]="profilePicService.getStyles(borReq.userName)">
+                    {{ borReq.userName.slice(0, 2) }}
+                  </div>
                 }
-              </tbody>
-            </table>
-<!--            <div class="flex items-center justify-end gap-3 py-6">-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/left-arrow.svg" alt="previous arrow">-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">-->
-<!--                1-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                ...-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                7-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/right-arrow.svg" alt="next arrow">-->
-<!--              </button>-->
-<!--            </div>-->
-          </div>
-        </div>
-      </div>
+                <div>
+                  <h2 class="text-primaryDarkColor3 font-semibold text-sm">{{ borReq.userName }}</h2>
+                  <p class="text-start text-secondaryGreyColor">{{ borReq.userEmail }}</p>
+                </div>
+              </div>
+
+            </td>
+            <td>
+              @if (borReq.borrowedStatus === "Borrowed") {
+                <div class="px-2 py-1 rounded-xl w-fit text-sm font-medium text-[#6941C6] bg-[#F9F5FF]">Borrowed</div>
+              } @else if (borReq.borrowedStatus === "Returned") {
+                <div class="px-2 py-1 rounded-xl w-fit text-sm font-medium text-[#026AA2] bg-[#F0F9FF]">Returned</div>
+              }
+              @else if (borReq.borrowedStatus === "Late Return") {
+                <div class="px-2 py-1 rounded-xl w-fit text-sm font-medium text-[#C01048] bg-[#FFF1F3]">Late Return</div>
+              }
+            </td>
+            <td class="font-medium text-xs text-tableColor">{{ borReq.borrowedDate | date }}</td>
+            <td class="font-medium text-xs text-tableColor">{{ borReq.returnDate | date }}</td>
+            <td class="font-medium text-xs text-tableColor">{{ borReq.dueDate | date }}</td>
+            <td>
+              <button class="group flex items-center gap-1 px-3 py-2 rounded-lg bg-ghostWhiteColor hover:bg-[#25388C] text-[#25388C] hover:text-ghostWhiteColor transition-all font-semibold text-sm">
+                <img src="/receipt.svg" alt="" class="transition-all group-hover:brightness-0 group-hover:invert" />
+                Generate
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
     </div>
+
   </div>
 </app-admin-layout>

@@ -20,112 +20,74 @@
       </div>
     </div>
 
-    <div>
-      <div class="flow-root">
-        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table class="min-w-[800px] w-full">
-              <thead>
-              <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[47%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Book
-                  Title
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Author</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Genre</th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Created
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
-              </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 bg-white w-full">
-                @for (book of allBooks; track book.id) {
-                  <tr>
-                    <td class="w-[47%] whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
+    <div class="card">
+      <p-table
+        [value]="allBooks"
+        [paginator]="true"
+        [rows]="6"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[6, 12, 20]"
+      >
+        <ng-template #header>
+          <tr>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Book Title</th>
+            <th scope="col" class="border-none text-t ableColor whitespace-nowrap text-sm">Author</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Genre</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Date Created</th>
+            <th scope="col" class="border-none rounded-tr-sm rounded-br-sm text-tableColor whitespace-nowrap text-sm">
+              Action
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template #body let-book>
+          <tr>
+            <td class="font-medium text-xs text-tableColor">
+              <div class="flex items-center gap-3">
+                <img [src]="book.bookPoster" alt="" class="h-10"/>
+                <h2 class="text-sm font-semibold text-primaryDarkColor3">{{ book.title }}</h2>
+              </div>
+            </td>
+            <td class="font-medium text-xs text-tableColor">{{ book.author }}</td>
+            <td class="font-medium text-xs text-tableColor">{{ book.genre }}</td>
+            <td class="font-medium text-xs text-tableColor">{{ book.dateCreated }}</td>
+            <td>
+              <div class="flex items-center gap-3">
+                <a [routerLink]="['/admin/all-books/edit-book', book.id]">
+                  <img src="/edit.svg" alt="" class="cursor-pointer"/>
+                </a>
+
+                <div class="card flex justify-center">
+                  <button (click)="showDialog()" class="btn-trash">
+                    <img src="/trash.svg" alt="" />
+                  </button>
+                  <p-dialog header="Remove Book" [modal]="true" [(visible)]="visible" class="acc-req-modals"
+                            [maximizable]="true">
+                    <div class="text-center">
+                      <img src="/deny.svg" alt="" class="mx-auto"/>
+                      <h2 class="text-xl font-semibold text-primaryDarkColor3 mt-3">Are You Sure to Remove The Book?</h2>
+                      <p class="text-base text-secondaryGreyColor mt-1">
+                        Denying this request will notify the student they’re not <br /> eligible due to unsuccessful ID card
+                        verification.
+                      </p>
                       <div class="flex items-center gap-2">
-                        <img [src]="book.bookPoster" alt="" class="h-14"/>
-                        <h2 class="text-sm font-semibold text-primaryDarkColor3">{{ book.title }}</h2>
+                        <button (click)="closeDialog()"
+                          class="mt-2  rounded-lg bg-gray-500 text-base font-semibold text-white py-3.5 text-center w-full">
+                          Cancel
+                        </button>
+                        <button
+                          class="mt-2  rounded-lg bg-[#F46F70] text-base font-semibold text-white py-3.5 text-center w-full">
+                          Remove
+                        </button>
                       </div>
-                    </td>
-                    <td
-                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.author }}
-                    </td>
-                    <td
-                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.genre }}
-                    </td>
-                    <td
-                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ book.dateCreated | date }}
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">
-                      <div class="flex items-center gap-4">
-                        <a [routerLink]="['edit-book/', book.id]">
-                          <img src="/edit.svg" alt="" class="cursor-pointer"/>
-                        </a>
-                        <hlm-dialog>
-                          <button id="" brnDialogTrigger>
-                            <img src="/trash.svg" alt="" class="cursor-pointer"/>
-                          </button>
-                          <hlm-dialog-content
-                                              class="w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
-                            <hlm-dialog-header>
-
-                            </hlm-dialog-header>
-                            <div class="py-4 place-items-center">
-                              <div class="size-28 rounded-full flex items-center justify-center bg-[#F46F70]/10">
-                                <img src="/deny.svg" alt=""/>
-                              </div>
-                              <div class="mt-5 text-center">
-                                <h2 class="text-base font-semibold text-primaryDarkColor3">Are You Sure to Remove
-                                  '{{ book.title }}' book from system?</h2>
-                                <p class="mt-1 text-sm text-[#64748B]">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda beatae
-                                  blanditiis consectetur cumque delectus doloremque est magni molestias.
-                                </p>
-                              </div>
-                            </div>
-                            <hlm-dialog-footer class="gap-y-3">
-                              <button type="submit"
-                                      class="w-full text-base font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#F46F70] hover:bg-[#F46F70]/85">
-                                Remove Book
-                              </button>
-
-                              <button type="button"
-                                      class="w-full text-base font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#757575] hover:bg-[#9E9E9E]">
-                                Cancel
-                              </button>
-                            </hlm-dialog-footer>
-                          </hlm-dialog-content>
-                        </hlm-dialog>
-                      </div>
-                    </td>
-                  </tr>
-                }
-              </tbody>
-            </table>
-<!--            <div class="flex items-center justify-end gap-3 py-6">-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/left-arrow.svg" alt="previous arrow">-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">-->
-<!--                1-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                ...-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                7-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/right-arrow.svg" alt="next arrow">-->
-<!--              </button>-->
-<!--            </div>-->
-          </div>
-        </div>
-      </div>
+                    </div>
+                  </p-dialog>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
     </div>
+
   </div>
 </app-admin-layout>

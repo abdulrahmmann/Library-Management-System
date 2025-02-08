@@ -22,7 +22,7 @@ export class AllUsersService {
       email: "bob.smith@example.com",
       profilePic: "/user4.png",
       dateJoined: "2023-03-10",
-      role: "user",
+      role: "User",
       booksBorrowed: "2",
       universityId: 90024423789
     },
@@ -31,7 +31,7 @@ export class AllUsersService {
       name: "Clara Adams",
       email: "clara.adams@example.com",
       dateJoined: "2023-01-25",
-      role: "user",
+      role: "User",
       booksBorrowed: "7",
       universityId: 90324423789
     },
@@ -51,7 +51,7 @@ export class AllUsersService {
       email: "eva.green@example.com",
       profilePic: "/user3.png",
       dateJoined: "2023-05-18",
-      role: "user",
+      role: "User",
       booksBorrowed: "4",
       universityId: 90324423789
     },
@@ -60,7 +60,7 @@ export class AllUsersService {
       name: "Frank Thomas",
       email: "frank.thomas@example.com",
       dateJoined: "2023-06-22",
-      role: "user",
+      role: "User",
       booksBorrowed: "3",
       universityId: 90324423789
     },
@@ -79,7 +79,7 @@ export class AllUsersService {
       name: "Henry Wilson",
       email: "henry.wilson@example.com",
       dateJoined: "2023-04-01",
-      role: "user",
+      role: "User",
       booksBorrowed: "1",
       universityId: 90324423789
     },
@@ -89,7 +89,7 @@ export class AllUsersService {
       email: "isabella.moore@example.com",
       profilePic: "/user2.png",
       dateJoined: "2023-08-12",
-      role: "user",
+      role: "User",
       booksBorrowed: "6",
       universityId: 90324423789
     },
@@ -102,7 +102,104 @@ export class AllUsersService {
       role: "Admin",
       booksBorrowed: "8",
       universityId: 90324423789
-    }
+    },
+    {
+      id: 11,
+      name: "Alice Johnson",
+      email: "alice.johnson@example.com",
+      profilePic: "/user.png",
+      dateJoined: "2023-02-15",
+      role: "Admin",
+      booksBorrowed: "5",
+      universityId: 90324423789
+    },
+    {
+      id: 12,
+      name: "Bob Smith",
+      email: "bob.smith@example.com",
+      profilePic: "/user4.png",
+      dateJoined: "2023-03-10",
+      role: "User",
+      booksBorrowed: "2",
+      universityId: 90024423789
+    },
+    {
+      id: 13,
+      name: "Clara Adams",
+      email: "clara.adams@example.com",
+      dateJoined: "2023-01-25",
+      role: "User",
+      booksBorrowed: "7",
+      universityId: 90324423789
+    },
+    {
+      id: 14,
+      name: "Daniel Baker",
+      email: "daniel.baker@example.com",
+      profilePic: "/user4.png",
+      dateJoined: "2022-11-20",
+      role: "Admin",
+      booksBorrowed: "10",
+      universityId: 90324423789
+    },
+    {
+      id: 15,
+      name: "Eva Green",
+      email: "eva.green@example.com",
+      profilePic: "/user3.png",
+      dateJoined: "2023-05-18",
+      role: "User",
+      booksBorrowed: "4",
+      universityId: 90324423789
+    },
+    {
+      id: 16,
+      name: "Frank Thomas",
+      email: "frank.thomas@example.com",
+      dateJoined: "2023-06-22",
+      role: "User",
+      booksBorrowed: "3",
+      universityId: 90324423789
+    },
+    {
+      id: 17,
+      name: "Grace Lee",
+      email: "grace.lee@example.com",
+      profilePic: "/user3.png",
+      dateJoined: "2023-07-05",
+      role: "Admin",
+      booksBorrowed: "12",
+      universityId: 90324423789
+    },
+    {
+      id: 18,
+      name: "Henry Wilson",
+      email: "henry.wilson@example.com",
+      dateJoined: "2023-04-01",
+      role: "User",
+      booksBorrowed: "1",
+      universityId: 90324423789
+    },
+    {
+      id: 19,
+      name: "Isabella Moore",
+      email: "isabella.moore@example.com",
+      profilePic: "/user2.png",
+      dateJoined: "2023-08-12",
+      role: "User",
+      booksBorrowed: "6",
+      universityId: 90324423789
+    },
+    {
+      id: 20,
+      name: "Jack White",
+      email: "jack.white@example.com",
+      profilePic: "/user.png",
+      dateJoined: "2023-09-09",
+      role: "Admin",
+      booksBorrowed: "8",
+      universityId: 90324423789
+    },
   ];
 
   get getAllUsers(): AllUsersModel[] {

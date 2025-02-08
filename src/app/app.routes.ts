@@ -52,13 +52,18 @@ export const routes: Routes = [
       },
       {
         path: 'edit-book/:id',
-        loadComponent: () =>
-          import('./admin/pages/edit-book/edit-book.component').then((mod) => mod.EditBookComponent)
-      },
-      {
-        path: 'edit-book/:id/edit-book-details',
-        loadComponent: () =>
-          import('./admin/pages/edit-book-details/edit-book-details.component').then((mod) => mod.EditBookDetailsComponent)
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./admin/pages/edit-book/edit-book.component').then((mod) => mod.EditBookComponent)
+          },
+          {
+            path: 'edit-book-details',
+            loadComponent: () =>
+              import('./admin/pages/edit-book-details/edit-book-details.component').then((mod) => mod.EditBookDetailsComponent)
+          },
+        ],
       },
     ]
   },

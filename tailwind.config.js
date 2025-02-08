@@ -1,11 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [require('@spartan-ng/brain/hlm-tailwind-preset')],
   content: [
     './src/**/*.{html,ts}',
-    './libs/ui/**/*.{html,ts}',
   ],
   theme: {
+    // container: {
+    //   padding: {
+    //     DEFAULT: '1rem',
+    //     sm: '2rem',
+    //     lg: '4rem',
+    //     xl: '5rem',
+    //     '2xl': '6rem',
+    //   },
+    //   center: true,
+    // },
     screens: {
       'xs': '430px',
       // => @media (min-width: 640px) { ... }
@@ -39,6 +47,8 @@ module.exports = {
         lightYellowColor: '#EED1AC',
 
         ghostWhiteColor: '#F8F8FF',
+
+        tableColor: '#3A354E',
       },
       backgroundImage: {
         'logo': "url('/book-wise-logo.png')",

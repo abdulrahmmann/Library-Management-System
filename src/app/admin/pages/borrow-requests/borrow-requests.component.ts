@@ -3,13 +3,15 @@ import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.c
 import {BorrowRequestsService} from '../../services/borrow-requests.service';
 import {ProfilePicService} from '../../services/profile-pic.service';
 import {DatePipe} from '@angular/common';
+import {TableModule} from "primeng/table";
 
 @Component({
   selector: 'app-borrow-requests',
-  imports: [
-    AdminLayoutComponent,
-    DatePipe
-  ],
+    imports: [
+        AdminLayoutComponent,
+        DatePipe,
+        TableModule
+    ],
   templateUrl: './borrow-requests.component.html',
   styles: ``
 })

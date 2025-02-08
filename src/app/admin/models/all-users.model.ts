@@ -5,7 +5,7 @@ export interface AllUsersModel {
   email: string;
   profilePic?: string;
   dateJoined: string;
-  role: 'Admin' | 'user';
+  role: 'Admin' | 'User';
   booksBorrowed: string;
   universityId: number;
 }

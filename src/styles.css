@@ -1,5 +1,5 @@
 @import '@angular/cdk/overlay-prebuilt.css';
-
+@import "primeicons/primeicons.css";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
@@ -8,75 +8,60 @@
 @tailwind utilities;
 
 body {
-font-family: 'IBM Plex Sans', 'Bebas Neue', 'Geist', sans-serif;
+  font-family: 'IBM Plex Sans', 'Bebas Neue', 'Geist', sans-serif;
 }
 
 .box-title {
   @apply text-sm sm:text-lg font-semibold text-primaryDarkColor3;
 }
+
 .label {
   @apply w-full mb-2 text-primaryDarkColor3 text-base font-medium block ml-1;
 }
+
 .input {
   @apply w-full p-4 bg-[#F9FAFB] rounded-md border border-[#CBD5E1] min-h-[53px] text-sm   focus:ring-2 focus:ring-neutral-200 outline-none;
 }
 
-
-:root {
---font-sans: ''
-}
-
-:root {
---background: 0 0% 100%;
---foreground: 240 10% 3.9%;
---card: 0 0% 100%;
---card-foreground: 240 10% 3.9%;
---popover: 0 0% 100%;;
---popover-foreground: 240 10% 3.9%;
---primary: 240 5.9% 10%;
---primary-foreground: 0 0% 98%;
---secondary: 240 4.8% 95.9%;
---secondary-foreground: 240 5.9% 10%;
---muted: 240 4.8% 95.9%;
---muted-foreground: 240 3.8% 46.1%;
---accent: 240 4.8% 95.9%;
---accent-foreground: 240 5.9% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 0 0% 98%;
---border: 240 5.9% 90%;
---input: 240 5.9% 90%;
---ring: 240 5.9% 10%;
---radius: 0.5rem;
-color-scheme: light;
-}
-
-.dark {
---background: 240 10% 3.9%;
---foreground: 0 0% 98%;
---card: 240 10% 3.9%;
---card-foreground: 0 0% 98%;
---popover: 240 10% 3.9%;
---popover-foreground: 0 0% 98%;
---primary: 0 0% 98%;
---primary-foreground: 240 5.9% 10%;
---secondary: 240 3.7% 15.9%;
---secondary-foreground: 0 0% 98%;
---muted: 240 3.7% 15.9%;
---muted-foreground: 240 5% 64.9%;
---accent: 240 3.7% 15.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 30.6%;
---destructive-foreground: 0 0% 98%;
---border: 240 3.7% 15.9%;
---input: 240 3.7% 15.9%;
---ring: 240 4.9% 83.9%;
-color-scheme: dark;
+th {
+  border: none !important;
+  background-color: #F8F8FF !important;
 }
 
 
-@layer base {
-* {
-@apply border-border;
-}
+.p-overlay-mask {
+  background: hsl(0deg 0% 0% / 27%) !important;
 }
 
+.btn-approve .p-button {
+  color: #027A48 !important;
+  background-color: #ECFDF3 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border: 0 !important;
+}
+.btn-deny .p-button {
+  color: #EF3A4B !important;
+  background-color: rgba(244, 111, 112, 0.1) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border: 0 !important;
+}
+.btn-approve .p-button:hover {
+  background-color: #4C7B62 !important;
+  color: white !important;
+}
+.btn-deny .p-button:hover {
+  background-color: #F46F70 !important;
+  color: white !important;
+}
+
+/*.acc-req-modals .p-dialog {*/
+/*  max-width: 500px !important;*/
+/*  width: 100% !important;*/
+/*}*/
+
+.btn-trash .p-button {
+  background: transparent !important;
+  border: none !important;
+}

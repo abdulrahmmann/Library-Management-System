@@ -9,7 +9,6 @@ import {NgIf} from '@angular/common';
     NgIf
   ],
   templateUrl: './user-dropdown.component.html',
-  styleUrl: './user-dropdown.component.css'
 })
 export class UserDropdownComponent {
   isDropdownVisible = signal<boolean>(false);

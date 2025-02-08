@@ -4,173 +4,102 @@
     <div class="flex items-center justify-between mb-5 flex-wrap">
       <h2 class="box-title">Account Registration Requests</h2>
       <button (click)="toggleSort()"
-        class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
+              class="px-3 py-2 flex items-center gap-1 border-2 border-ghostWhiteColor hover:bg-ghostWhiteColor rounded-lg cursor-pointer">
         <h3 class="font-medium text-primaryDarkColor4 text-start sm:text-sm">Oldest to Recent</h3>
         <img src="/arrow-swap.svg" alt=""/>
       </button>
     </div>
 
-    <div>
-      <div class="flow-root">
-        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table class="min-w-[800px] w-full">
-              <thead>
-              <tr class="bg-ghostWhiteColor">
-                <th scope="col" class="w-[40%] py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Name
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Date Joined
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
-                  No
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">University ID
-                  Card
-                </th>
-                <th scope="col" class="py-3.5 px-2 text-left text-sm font-normal text-primaryDarkColor4">Action</th>
-              </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 bg-white w-full">
-                @for (account of allAccounts; track account.id) {
-                  <tr>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
-                      <div class="flex items-center gap-2">
-                        @if (account.profilePic) {
-                          <img
-                            [src]="account.profilePic"
-                            alt="account image"
-                            class="size-12 rounded-full"/>
-                        } @else {
-                          <div
-                            class="size-12 rounded-full flex items-center justify-center text-primaryDarkColor4 border-2 uppercase font-geist font-semibold text-xl"
-                            [class]="profilePicService.getStyles(account.name)">
-                            {{ account.name.slice(0, 2) }}
-                          </div>
-                        }
-                        <div>
-                          <h2 class="mb-0 text-sm font-semibold text-primaryDarkColor4">{{ account.name }}</h2>
-                          <p class="text-sm text-secondaryGreyColor">{{ account.email }}</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.dateJoined | date }}
-                    </td>
-                    <td
-                      class="whitespace-nowrap py-5 px-2 text-sm text-primaryDarkColor4 font-medium">{{ account.universityId }}
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
-                      <hlm-dialog>
-                        <button brnDialogTrigger>
-                          <div class="flex items-center gap-2 cursor-pointer">
-                            <img src="/eye-blue.svg" alt=""/>
-                            <h3 class="text-sm font-semibold text-sky-500">View ID Card</h3>
-                          </div>
-                        </button>
-                        <hlm-dialog-content
-                          class="w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
-                          <hlm-dialog-header>
-
-                          </hlm-dialog-header>
-                          <div class="py-4 place-items-center">
-
-                          </div>
-                          <hlm-dialog-footer>
-
-                          </hlm-dialog-footer>
-                        </hlm-dialog-content>
-                      </hlm-dialog>
-                    </td>
-                    <td class="whitespace-nowrap py-5 px-2 text-sm">
-                      <div class="flex items-center gap-2.5">
-
-                        <hlm-dialog>
-                          <button id="edit-profile" brnDialogTrigger
-                          class="px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#027A48] bg-[#ECFDF3] hover:bg-green-800 hover:text-ghostWhiteColor transition-all">
-                            Approve
-                          </button>
-                          <hlm-dialog-content
-                            class="w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
-                            <hlm-dialog-header>
-
-                            </hlm-dialog-header>
-                            <div class="py-4 place-items-center">
-                              <div class="size-28 rounded-full flex items-center justify-center bg-[#4C7B62]/10">
-                                <img src="/approve.svg" alt="" />
-                              </div>
-                              <div class="mt-5 text-center">
-                                <h2 class="text-lg font-semibold text-primaryDarkColor3">Approve Account Request</h2>
-                                <p class="mt-1 text-base text-[#64748B]">Approve the student’s account request and grant access. A confirmation email will be sent upon approval.</p>
-                              </div>
-                            </div>
-                            <hlm-dialog-footer>
-                              <button type="submit"
-                                      class="w-full text-sm font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#4C7B62] hover:bg-[#4C7B62]/85">
-                                Approve & Send Confirmation
-                              </button>
-                            </hlm-dialog-footer>
-                          </hlm-dialog-content>
-                        </hlm-dialog>
-
-                        <hlm-dialog>
-                          <button id="" brnDialogTrigger
-                                  class="w-full px-3 py-2 rounded-lg text-center font-semibold text-sm text-[#EF3A4B] bg-[#FDF2FA] hover:bg-rose-800 hover:text-ghostWhiteColor transition-all">
-                            Deny
-                          </button>
-                          <hlm-dialog-content
-                            class="w-[90%] mx-auto sm:w-[500px] justify-center" *brnDialogContent="let ctx">
-                            <hlm-dialog-header>
-
-                            </hlm-dialog-header>
-                            <div class="py-4 place-items-center">
-                              <div class="size-28 rounded-full flex items-center justify-center bg-[#F46F70]/10">
-                                <img src="/deny.svg" alt="" />
-                              </div>
-                              <div class="mt-5 text-center">
-                                <h2 class="text-base font-semibold text-primaryDarkColor3">Deny Account Request</h2>
-                                <p class="mt-1 text-base text-[#64748B]">Denying this request will notify the student they’re not eligible due to unsuccessful ID card verification.</p>
-                              </div>
-                            </div>
-                            <hlm-dialog-footer>
-                              <button type="submit"
-                                      class="w-full text-sm font-bold text-[#F8FAFC] p-3.5 rounded-lg bg-[#F46F70] hover:bg-[#F46F70]/85">
-                                Deny & Notify Student
-                              </button>
-                            </hlm-dialog-footer>
-                          </hlm-dialog-content>
-                        </hlm-dialog>
-
-                      </div>
-                    </td>
-                  </tr>
+    <div class="card">
+      <p-table
+        [value]="allAccounts"
+        [paginator]="true"
+        [rows]="6"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[6, 12, 20]"
+      >
+        <ng-template #header>
+          <tr>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Name</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Date Joined</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">University ID No</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">University ID Card</th>
+            <th scope="col" class="border-none text-tableColor whitespace-nowrap text-sm">Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template #body let-accReq>
+          <tr>
+            <td class="text-xs text-tableColor">
+              <div class="flex items-center gap-2">
+                @if (accReq.profilePic) {
+                  <img [src]="accReq.profilePic" alt="user img" class="size-10 rounded-full object-contain"/>
+                } @else {
+                  <div [class]="profilePicService.getStyles(accReq.name)">
+                    {{ accReq.name.slice(0, 2) }}
+                  </div>
                 }
-              </tbody>
-            </table>
-<!--            <div class="flex items-center justify-end gap-3 py-6">-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/left-arrow.svg" alt="previous arrow">-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-lightYellowColor hover:bg-lightYellowColor/80 rounded-lg flex items-center justify-center text-darkTextColor font-semibold">-->
-<!--                1-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                ...-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center text-primaryWhiteColor font-semibold">-->
-<!--                7-->
-<!--              </button>-->
-<!--              <button-->
-<!--                class="size-12 bg-inputColor hover:bg-inputColor/80 rounded-lg flex items-center justify-center"><img-->
-<!--                src="/right-arrow.svg" alt="next arrow">-->
-<!--              </button>-->
-<!--            </div>-->
-          </div>
-        </div>
-      </div>
+                <div>
+                  <h2 class="text-primaryDarkColor3 font-semibold text-sm">{{ accReq.name }}</h2>
+                  <p class="text-start text-secondaryGreyColor">{{ accReq.email }}</p>
+                </div>
+              </div>
+
+            </td>
+            <td class="text-xs text-tableColor">{{ accReq.dateJoined | date }}</td>
+            <td class="text-xs text-tableColor">{{ accReq.universityId }}</td>
+            <td class="text-xs text-tableColor">
+              <div class="flex items-center gap-1 cursor-pointer">
+                <img src="/eye-blue.svg" alt="">
+                <h3 class="text-sm font-medium text-[#0089F1]">View ID Card</h3>
+              </div>
+            </td>
+            <td>
+              <div class="flex items-center gap-2">
+                <div class="card flex justify-center">
+                  <p-button (click)="showApproveDialog()" label="Approve" class="btn-approve"/>
+                  <p-dialog header="Approve" [modal]="true" [(visible)]="visibleApprove" class="acc-req-modals"
+                            [maximizable]="true">
+                    <div class="text-center">
+                      <img src="/approve.svg" alt="" class="mx-auto"/>
+                      <h2 class="text-xl font-semibold text-primaryDarkColor3 mt-3">Approve Book Request</h2>
+                      <p class="text-base text-secondaryGreyColor mt-1">
+                        Approve the student’s account request and grant access.<br/> A confirmation email will be sent
+                        upon
+                        approval.
+                      </p>
+                      <button
+                        class="mt-2  rounded-lg bg-[#4C7B62] text-base font-semibold text-white py-3.5 text-center w-full">
+                        Approve & Send Confirmation
+                      </button>
+                    </div>
+                  </p-dialog>
+                </div>
+
+                <div class="card flex justify-center">
+                  <p-button (click)="showDenyDialog()" label="Deny" class="btn-deny"/>
+                  <p-dialog header="Deny" [modal]="true" [(visible)]="visibleDeny" class="acc-req-modals"
+                            [maximizable]="true">
+                    <div class="text-center">
+                      <img src="/deny.svg" alt="" class="mx-auto"/>
+                      <h2 class="text-xl font-semibold text-primaryDarkColor3 mt-3">Deny Book Request</h2>
+                      <p class="text-base text-secondaryGreyColor mt-1">
+                        Denying this request will notify the student they’re not <br /> eligible due to unsuccessful ID card
+                        verification.
+                      </p>
+                      <button
+                        class="mt-2  rounded-lg bg-[#F46F70] text-base font-semibold text-white py-3.5 text-center w-full">
+                        Deny & Notify Student
+                      </button>
+                    </div>
+                  </p-dialog>
+                </div>
+
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
     </div>
+
   </div>
 </app-admin-layout>
