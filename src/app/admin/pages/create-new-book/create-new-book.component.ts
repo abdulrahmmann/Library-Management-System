@@ -1,23 +1,48 @@
 import {Component, inject} from '@angular/core';
 import {AdminLayoutComponent} from '../../components/admin-layout/admin-layout.component';
 import {Location, NgOptimizedImage} from '@angular/common';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import { ColorPickerModule } from 'primeng/colorpicker';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+
+// interface UploadEvent {
+//   originalEvent: Event;
+//   files: File[];
+// }
 
 @Component({
   selector: 'app-create-new-book',
   imports: [
     AdminLayoutComponent,
     ReactiveFormsModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ColorPickerModule,
+    FormsModule,
+    ToastModule,
   ],
+  providers: [MessageService],
   templateUrl: './create-new-book.component.html',
 })
+
 export class CreateNewBookComponent {
   private _location = inject(Location);
 
   goBack() {
     this._location.back();
   }
+
+  color: string = '#ffffff';
+  updateColor(event: any) {
+    this.color = event.value;
+  }
+
+  // constructor(private messageService: MessageService) { }
+  //
+  // onBasicUploadAuto(event: UploadEvent) {
+  //   this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded with Auto Mode' });
+  // }
+
 
   createBookForm = new FormGroup({
     bookTitleControl: new FormControl('', {
