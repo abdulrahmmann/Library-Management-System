@@ -65,3 +65,13 @@ th {
   background: transparent !important;
   border: none !important;
 }
+
+.p-drawer-header {
+  padding: 0 !important;
+  justify-content: end !important;
+}
+
+.btn-drawer .p-button {
+  background-color: #25388C !important;
+  border-color: #25388C !important;
+}
